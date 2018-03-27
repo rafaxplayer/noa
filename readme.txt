@@ -34,9 +34,9 @@ noa includes support for Infinite Scroll in Jetpack.
 
 == Licenses ==
 
-* Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
-* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT).
-* masonry.pkgd.js https://github.com/desandro/masonry, Copyright © 2018 David DeSandro, [MIT](https://desandro.mit-license.org/).
-* imagesloaded.pkgd.js https://github.com/desandro/imagesloaded, Copyright © 2018 David DeSandro, [MIT](https://desandro.mit-license.org/).
-* AOS.js  https://github.com/michalsnik/aos, Copyright (c) 2015 Michał Sajnóg, [MIT](https://github.com/michalsnik/aos/blob/master/LICENSE).
-* Icons https://www.flaticon.com/ ,[Creative Commons](https://creativecommons.org/licenses/by/3.0/).
+* Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
+* masonry.pkgd.js https://github.com/desandro/masonry, Copyright © 2018 David DeSandro, [MIT](https://desandro.mit-license.org/)
+* imagesloaded.pkgd.js https://github.com/desandro/imagesloaded, Copyright © 2018 David DeSandro, [MIT](https://desandro.mit-license.org/)
+* AOS.js  https://github.com/michalsnik/aos, Copyright (c) 2015 Michał Sajnóg, [MIT](https://github.com/michalsnik/aos/blob/master/LICENSE)
+* Icons https://www.flaticon.com/ ,[Creative Commons](https://creativecommons.org/licenses/by/3.0/)
