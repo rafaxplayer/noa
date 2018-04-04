@@ -32,13 +32,13 @@ if ( post_password_required() ) {
 			if ( '1' === $noa_comment_count ) {
 				printf(
 					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'noa' ),
+					esc_html__( 'One Comment', 'noa' ),
 					'<span>' . get_the_title() . '</span>'
 				);
 			} else {
 				printf( // WPCS: XSS OK.
 					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $noa_comment_count, 'comments title', 'noa' ) ),
+					esc_html( _n( '%s Comment', '%s Comments', $noa_comment_count ,'noa' )),
 					number_format_i18n( $noa_comment_count ),
 					'<span>' . get_the_title() . '</span>'
 				);
@@ -69,7 +69,7 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form();
+	comment_form(array('title_reply'=>__('What do you think?','noa')));
 	?>
 
 </div><!-- #comments -->

@@ -13,42 +13,35 @@
 	
 		<?php
 		if ( is_singular() ) :?>
-
 			<header class="entry-header">
+				
+					<div class="image-info">
+						<?php the_title( '<h1 class="entry-title">', '</h1>' );?>
+						<?php if ( 'post' === get_post_type()) :?>
+							<div class="entry-meta">
+								<?php
+									noa_post_date();
+									noa_posted_by();
+								?>
+							</div><!-- .entry-meta -->
+						<?php endif; ?>
+					</div>
 				<?php noa_post_thumbnail(); ?>
-				<div class="image-info">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' );?>
-					<?php if ( 'post' === get_post_type()) :?>
-						<div class="entry-meta">
-							<?php
-								noa_post_date();
-								noa_posted_by();
-							?>
-						</div><!-- .entry-meta -->
-					<?php endif; ?>
-				</div>
+					
 			</header>
-			
 		<?php else :?>
-
 			<?php noa_post_thumbnail(); ?>
-
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
 			<div class="info">
-				
-					<?php the_title( '<h2 class="entry-title">', '</h2>' );?>
-					<div class="meta">
-						<?php noa_post_date(); noa_comments_count(); ?>
-					</div>
-					
-				
+				<?php if(is_sticky() ): echo '<span class="sticky-icon">'. __( 'Sticky post', 'noa' ) .'</span>'; endif?>
+				<?php the_title( '<h2 class="entry-title">', '</h2>' );?>
+				<div class="meta">
+					<?php noa_post_date(); noa_comments_count(); ?>
+				</div>
 			</div>
 			</a>
 		<?php endif;?>
-
-	
-		<?php
-		if ( is_singular() ) :?>
+		<?php if ( is_singular() ) :?>
 			<div class="entry-content">
 				<?php the_content( sprintf(
 					wp_kses(
@@ -71,8 +64,8 @@
 			
 		</div><!-- .entry-content -->
 		<footer class="entry-footer">
-				<?php noa_entry_footer(); ?>
-			</footer><!-- .entry-footer -->
+			<?php noa_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
 		<?php endif ?>
 	
 </article><!-- #post-<?php the_ID(); ?> -->

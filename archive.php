@@ -21,22 +21,24 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-
+			<div class="posts-container">
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+				/* Start the Loop */
+				while ( have_posts() ) :?>
+					<div class="post-wrapp">
+						<?php the_post();
+							
+						get_template_part( 'template-parts/content', get_post_type() );?>
+						</div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				<?php endwhile;?>
+			</div>
 
-			endwhile;
-
-			the_posts_navigation();
+			<?php the_posts_navigation(array(
+					'prev_text'                  => __( 'Old','noa'),
+					'next_text'                  => __( 'New','noa' ),
+					'screen_reader_text' => __( 'Post navigation' ,'noa'),
+				) );
 
 		else :
 

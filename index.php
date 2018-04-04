@@ -45,7 +45,11 @@ get_header();
 				<?php endwhile;?>
 			</div>
 
-			<?php the_posts_navigation();
+			<?php the_posts_navigation(array(
+				'prev_text'                  => __( 'Old','noa'),
+				'next_text'                  => __( 'New','noa' ),
+				'screen_reader_text' => __( 'Post navigation','noa' ),
+			) );
 
 		else :
 

@@ -117,7 +117,7 @@ if ( ! function_exists( 'noa_post_thumbnail' ) ) :
 	 * element when on single views.
 	 */
 	function noa_post_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
 
@@ -125,21 +125,26 @@ if ( ! function_exists( 'noa_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php the_post_thumbnail('full'); ?>
+				<?php if(has_post_thumbnail( )):
+					 the_post_thumbnail('post-single'); 
+				else:?>
+					<img src="<?php echo get_template_directory_uri().'/assets/images/placeholder-single.png' ?>" alt="paceholder image">
+				<?php endif; ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
-
 		
 			<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-			?>
+			if(has_post_thumbnail( )):
+				the_post_thumbnail( 'post-thumbnail', array(
+					'alt' => the_title_attribute( array(
+						'echo' => false,
+					) ),
+				) );
+			else:?>
+				<img src="<?php echo get_template_directory_uri().'/assets/images/placeholder-thumb.png' ?>" alt="paceholder image">
+			<?php endif; ?>
 		
-
 		<?php
 		endif; // End is_singular().
 	}
