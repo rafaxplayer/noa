@@ -27,6 +27,8 @@ Description
 
 noa includes support for Infinite Scroll in Jetpack.
 
+The galleries use lightbox technology for their correct operation when creating them, you must establish "link to" as the media file.
+
 == Changelog ==
 
 = 1.0 - May 12 2015 =

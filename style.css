@@ -4,11 +4,11 @@ Theme URI: https://juanrafaelsimarro.com/
 Author: Underscores.me
 Author URI: https:/juanrafaelsimarro.com/
 Description: Theme thought for photography or photo blog, that's why priority is given to the highlighting of the images.
-Version: 1.0.0
+Version: 1.2.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: noa
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, grid-layout,right-sidebar, left-sidebar, custom-colors, footer.widgets, photography, full-width-temaplate
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -108,6 +108,7 @@ h1 {
  */
 
 hr {
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     /* 1 */
     height: 0;
@@ -153,6 +154,7 @@ abbr[title] {
     /* 1 */
     text-decoration: underline;
     /* 2 */
+    -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
     /* 2 */
 }
@@ -330,6 +332,7 @@ fieldset {
  */
 
 legend {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     /* 1 */
     color: inherit;
@@ -370,6 +373,7 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     /* 1 */
     padding: 0;
@@ -561,6 +565,7 @@ big {
 --------------------------------------------------------------*/
 
 html {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -568,6 +573,7 @@ html {
 *:before,
 *:after {
     /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
 
@@ -684,6 +690,7 @@ textarea {
 a {
     color: #f113f1;
     text-decoration: none;
+    -webkit-transition: all .4s;
     transition: all .4s;
     font-weight: 600;
 }
@@ -710,6 +717,7 @@ a:active {
     background-color: black;
     display: block;
     text-align: left;
+    -webkit-transition: all .4s;
     transition: all .4s;
 }
 
@@ -746,6 +754,7 @@ a:active {
     position: relative;
     z-index: 99999;
     background-color: black;
+    -webkit-transition: all 1s;
     transition: all 1s;
 }
 
@@ -769,6 +778,7 @@ a:active {
     .main-navigation ul ul {
         top: 100%;
         left: -999em;
+        -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
         box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
         position: absolute;
         background-color: rgb(27, 27, 27);
@@ -936,6 +946,7 @@ a:active {
 .screen-reader-text {
     border: 0;
     clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
     clip-path: inset(50%);
     height: 1px;
     margin: -1px;
@@ -950,8 +961,10 @@ a:active {
 .screen-reader-text:focus {
     background-color: #f1f1f1;
     border-radius: 3px;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
+    -webkit-clip-path: none;
     clip-path: none;
     color: #21759b;
     display: block;
@@ -1099,6 +1112,7 @@ a:active {
     height: 1px;
     width: 4rem;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     top: 100%;
 }
@@ -1112,6 +1126,7 @@ a:active {
     display: block;
     left: 50%;
     top: 100%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
@@ -1129,10 +1144,19 @@ a:active {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     color: white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
@@ -1179,6 +1203,7 @@ a:active {
         opacity: 0;
         font-weight: 100;
         background-color: rgba(0, 0, 0, 0.6);
+        -webkit-transition: opacity .8s ease-in-out;
         transition: opacity .8s ease-in-out;
     }
     .posts-container .post h2 {
@@ -1207,9 +1232,16 @@ a:active {
     font-weight: 200;
     color: #5f065f;
     padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     background-color: #d48ad47a;
     text-align: center;
@@ -1224,6 +1256,7 @@ a:active {
 
 .post .entry-content {
     padding: 2rem;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -1390,7 +1423,11 @@ article.page,
 }
 
 .comment-meta .vcard {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -1462,6 +1499,7 @@ article.page,
     font-size: 1.2rem;
     font-weight: 200;
     cursor: pointer;
+    -webkit-transition: all .4s;
     transition: all .4s;
     max-width: 20rem;
     margin: 2rem auto;
@@ -1481,6 +1519,7 @@ article.page,
     position: relative;
     display: block;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     margin-top: 1rem;
 }
@@ -1496,12 +1535,20 @@ article.page,
     display: block;
     left: 50%;
     top: 100%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
 .comment-form-comment {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -1634,7 +1681,8 @@ object {
 ## Galleries
 --------------------------------------------------------------*/
 
-.gallery {
+
+/* .gallery {
     margin-bottom: 1.5em;
 }
 
@@ -1680,6 +1728,46 @@ object {
 
 .gallery-caption {
     display: block;
+} */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
+    grid-gap: 2px;
+}
+
+.gallery figure {
+    margin: 0;
+    overflow: hidden;
+}
+
+.gallery .gallery-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery .gallery-icon a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all .4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.2) rotate(2deg);
+}
+
+.gallery .gallery-item:nth-child(2n+0) {
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
 
@@ -1722,10 +1810,12 @@ object {
         height: 2px;
         top: 100%;
         left: 50%;
+        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
         position: absolute;
         display: block;
         background-color: fuchsia;
+        -webkit-transition: all .4s;
         transition: all .4s;
     }
     .post-navigation .nav-links a:hover:after,
@@ -1785,6 +1875,7 @@ object {
 }
 
 .site-header .searchform {
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     background-color: black;
     text-align: center;
@@ -1861,7 +1952,9 @@ object {
     bottom: 5rem;
     z-index: 99999;
     cursor: pointer;
+    -webkit-box-shadow: -1px 1px 1px #3c3939ab;
     box-shadow: -1px 1px 1px #3c3939ab;
+    -webkit-transition: all .4s;
     transition: all .4s;
 }
 
@@ -1877,9 +1970,17 @@ object {
 
 .site-footer .footer-widgets {
     background-color: rgb(27, 27, 27);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
 }
 
@@ -1888,6 +1989,7 @@ object {
     font-weight: 200;
     display: inline-block;
     padding: .3rem .5rem;
+    -webkit-transition: all .4s;
     transition: all .4s;
 }
 
@@ -1918,16 +2020,25 @@ object {
 
 .site-footer .footer-widgets .widgets-content {
     padding: 1rem .5rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
 .site-footer .footer-widgets .widget {
     padding-bottom: 1rem;
     margin: 2rem .5rem;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     min-width: 180px;
     max-width: 500px;
@@ -1944,16 +2055,30 @@ object {
 }
 
 .site-footer .footer-widgets .widget_recent_entries ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     padding: .5rem;
 }
 
 .site-footer .footer-widgets .widget_recent_entries ul li .noa-widget-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -ms-flex-line-pack: start;
     align-content: flex-start;
 }
 
@@ -1999,9 +2124,16 @@ object {
 }
 
 .site-footer .social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     padding-top: 2rem;
 }
@@ -2014,6 +2146,7 @@ object {
     height: 2.5rem;
     display: inline-block;
     padding: 2.5rem;
+    -webkit-transition: all .4s;
     transition: all .4s;
 }
 
@@ -2025,8 +2158,10 @@ object {
     height: 2px;
     left: 50%;
     bottom: -2rem;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     background-color: fuchsia;
+    -webkit-transition: width .3s;
     transition: width .3s;
 }
 
@@ -2084,10 +2219,14 @@ object {
 
 @media screen and (min-width:70rem) {
     .site-footer .footer-widgets {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
     }
     .site-footer .footer-widgets .widgets-content {
         padding: 4rem .5rem;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     }
 }
@@ -2104,8 +2243,15 @@ object {
 =============================================*/
 
 .error-404.not-found {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 

@@ -28,8 +28,6 @@
 
 		<?php get_search_form(); ?>
 
-		
-
 		<div class="site-branding">
 
 			<?php the_custom_logo(); ?>
@@ -54,7 +52,6 @@
 				
 			) );
 			?>
-			
 			
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
