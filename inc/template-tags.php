@@ -120,13 +120,13 @@ if ( ! function_exists( 'noa_post_thumbnail' ) ) :
 		if ( post_password_required() || is_attachment() ) {
 			return;
 		}
-
+		
 		if ( is_singular() ) :
 			?>
 
 			<div class="post-thumbnail">
 				<?php if(has_post_thumbnail( )):
-					 the_post_thumbnail('post-single'); 
+					the_post_thumbnail('post-single'); 
 				else:?>
 					<img src="<?php echo get_template_directory_uri().'/assets/images/placeholder-single.png' ?>" alt="paceholder image">
 				<?php endif; ?>
@@ -147,5 +147,6 @@ if ( ! function_exists( 'noa_post_thumbnail' ) ) :
 		
 		<?php
 		endif; // End is_singular().
+		
 	}
 endif;

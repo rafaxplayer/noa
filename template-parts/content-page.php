@@ -14,7 +14,10 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php noa_post_thumbnail(); ?>
+	<div class="post-thumbnail">
+		<?php if(has_post_thumbnail()):
+				the_post_thumbnail('post-single'); 
+			endif;?>
 
 	<div class="entry-content">
 		<?php

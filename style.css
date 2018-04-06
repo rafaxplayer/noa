@@ -783,6 +783,7 @@ a:active {
         position: absolute;
         background-color: rgb(27, 27, 27);
         display: none;
+        min-width: 200px;
     }
     .main-navigation ul ul ul {
         left: -999em;
