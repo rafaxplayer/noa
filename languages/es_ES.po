@@ -1,0 +1,254 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: noa\n"
+"POT-Creation-Date: 2018-04-04 14:35+0200\n"
+"PO-Revision-Date: 2018-04-18 14:05+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: es_ES\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops No se encontró el contenido."
+
+#: 404.php:22
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"No se encontró el contenido en esta ubicación , prueba a usar el buscador"
+
+#: archive.php:38 index.php:49 search.php:40
+msgid "Old"
+msgstr "Viejo"
+
+#: archive.php:39 index.php:50 search.php:41
+msgid "New"
+msgstr "Nuevo"
+
+#: archive.php:40 index.php:51 search.php:42 single.php:25
+msgid "Post navigation"
+msgstr "Navegación de entradas"
+
+#. translators: 1: title.
+#: comments.php:35
+msgid "One Comment"
+msgstr "Un Comentario"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+#, php-format
+msgid "%s Comment"
+msgid_plural "%s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: comments.php:72
+msgid "What do you think?"
+msgstr "¿Qué estas pensando?"
+
+#: footer.php:82
+#, php-format
+msgid "Theme: Noa by <a href=\"%1$s\">rafax</a>."
+msgstr "Tema: Noa por <a href=\"%1$s\">rafax</a>."
+
+#: functions.php:59
+msgid "Primary"
+msgstr "Principal"
+
+#: functions.php:120
+msgid "Footer Widgets 1"
+msgstr "Pie de pagina widgets 1"
+
+#: functions.php:122 functions.php:132 functions.php:142
+msgid "Add widgets here."
+msgstr "Añade widgets aquí."
+
+#: functions.php:130
+msgid "Footer Widgets 2"
+msgstr "Pie de pagina widgets 2"
+
+#: functions.php:140
+msgid "Footer Widgets 3"
+msgstr "Pie de pagina widgets 3"
+
+#: header.php:25
+msgid "Skip to content"
+msgstr "Saltar al contenido"
+
+#: inc/customizer.php:22
+msgid "Social icons"
+msgstr "Iconos redes sociales"
+
+#: inc/customizer.php:24
+msgid "Set url for social icons footer, with hidde icon set empty value."
+msgstr ""
+"Establece url para los iconos sociales del pie de pagina. Para ocultar "
+"iconos deja el campo en blanco."
+
+#: inc/customizer.php:35
+msgid "Instagram Url"
+msgstr ""
+
+#: inc/customizer.php:49
+msgid "Pinterest Url"
+msgstr ""
+
+#: inc/customizer.php:63
+msgid "Facebook Url"
+msgstr ""
+
+#: inc/customizer.php:77
+msgid "Twitter Url"
+msgstr ""
+
+#: inc/customizer.php:91
+msgid "Linkedin Url"
+msgstr ""
+
+#: inc/customizer.php:105
+msgid "Whatsapp Phone number"
+msgstr "Whatsapp numero de teléfono"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:46
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "por %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:75
+msgid " / "
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:82
+msgctxt "list item separator"
+msgid " / "
+msgstr ""
+
+#. translators: %s: post title
+#: inc/template-tags.php:95
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Deja un comentario<span class=\"screen-reader-text\"> en %s</span"
+
+#: inc/template-tags.php:107
+msgid "Edit"
+msgstr "Editar"
+
+#. translators: %s: search query.
+#: search.php:22
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Resultados de búsqueda para: %s"
+
+#: searchform.php:2
+msgid "Enter text to search"
+msgstr "Introduce texto a buscar"
+
+#: searchform.php:3
+msgid "Search"
+msgstr "Buscar"
+
+#: single.php:23
+msgid "Previous"
+msgstr "Anterior"
+
+#: single.php:24
+msgid "Next"
+msgstr "Siguiente"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "No se encontro"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Preparado para publicar tu primera entrada? <a href=\"%1$s\">Empieza aquí</"
+"a>."
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Lo sentimos, pero nada coincide con sus términos de búsqueda. Por favor, "
+"inténtelo de nuevo con algunas palabras clave diferentes."
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que no podemos encontrar lo que estás buscando. Quizás la búsqueda "
+"puede ayudar."
+
+#: template-parts/content-page.php:24 template-parts/content.php:61
+msgid "Pages:"
+msgstr "Páginas:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-page.php:37
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Editar <span class=\"screen-reader-text\">%s</span>"
+
+#: template-parts/content.php:36
+msgid "Sticky post"
+msgstr "Publicación adhesiva"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:49
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Continua leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: widgets/recent-post-thumbnails.php:16
+msgid "Recent Posts"
+msgstr "Publicaciones recientes"
+
+#. Theme Name of the plugin/theme
+msgid "noa"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://juanrafaelsimarro.com/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Theme thought for photography or photo blog, that's why priority is given to "
+"the highlighting of the images."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Underscores.me"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https:/juanrafaelsimarro.com/"
+msgstr ""

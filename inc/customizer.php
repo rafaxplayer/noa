@@ -69,9 +69,7 @@ function noa_customize_register( $wp_customize ) {
 	/* Twitter*/
 	$wp_customize->add_setting( 'noa_twitter_url', 
 	array( 
-		'sanitize_callback' => 'esc_url_raw'
-	) 
-	);
+		'sanitize_callback' => 'esc_url_raw') );
 
 	$wp_customize->add_control( 'noa_twitter_url_control', array(
 	'label'      => esc_html__( 'Twitter Url', 'noa' ),
@@ -83,9 +81,7 @@ function noa_customize_register( $wp_customize ) {
 	/* Linkedin*/
 	$wp_customize->add_setting( 'noa_linkedin_url', 
 	array( 
-		'sanitize_callback' => 'esc_url_raw'
-	) 
-	);
+		'sanitize_callback' => 'esc_url_raw') );
 
 	$wp_customize->add_control( 'noa_linkedin_url_control', array(
 	'label'      => esc_html__( 'Linkedin Url', 'noa' ),
