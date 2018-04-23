@@ -181,6 +181,20 @@ function noa_scripts() {
 add_action( 'wp_enqueue_scripts', 'noa_scripts' );
 
 /**
+ * Set default size for galleries
+ */
+function noa_gallery_defaults( $settings, $post ) {
+    $defaults = ! empty( $settings['galleryDefaults'] ) && is_array( $settings['galleryDefaults'] ) ? $settings['galleryDefaults'] : array();
+    $settings['galleryDefaults'] = array_merge( $defaults, array(
+        'columns'   => 5,
+        'size'      => 'large',
+        'link'      => 'file'
+    ) );
+    return $settings;
+}
+add_filter( 'media_view_settings', 'noa_gallery_defaults', 10, 2 );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

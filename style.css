@@ -1,8 +1,8 @@
 /*!
 Theme Name: noa
 Theme URI: https://juanrafaelsimarro.com/
-Author: Underscores.me
-Author URI: https:/juanrafaelsimarro.com/
+Author: J Raafel simarro
+Author URI: https://juanrafaelsimarro.com/
 Description: Theme thought for photography or photo blog, that's why priority is given to the highlighting of the images.
 Version: 1.2.0
 License: GNU General Public License v2 or later
@@ -1682,55 +1682,6 @@ object {
 ## Galleries
 --------------------------------------------------------------*/
 
-
-/* .gallery {
-    margin-bottom: 1.5em;
-}
-
-.gallery-item {
-    display: inline-block;
-    text-align: center;
-    vertical-align: top;
-    width: 100%;
-    margin: 0;
-}
-
-.gallery-columns-2 .gallery-item {
-    max-width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-    max-width: 33.33%;
-}
-
-.gallery-columns-4 .gallery-item {
-    max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-    max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-    max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-    max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-    max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-    max-width: 11.11%;
-}
-
-.gallery-caption {
-    display: block;
-} */
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1757,12 +1708,15 @@ object {
 .gallery img {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
     display: block;
+    -webkit-transition: all .4s;
     transition: all .4s;
 }
 
 .gallery img:hover {
+    -webkit-transform: scale(1.2) rotate(2deg);
     transform: scale(1.2) rotate(2deg);
 }
 
@@ -2134,8 +2088,6 @@ object {
     flex-wrap: wrap;
     padding-top: 2rem;
 }
-
-
 
 .site-footer .social span {
     background-size: 2.5rem;
