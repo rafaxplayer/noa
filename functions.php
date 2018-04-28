@@ -39,7 +39,7 @@ if ( ! function_exists( 'noa_setup' ) ) :
 		* Image sizes
 		*/
 		add_image_size( 'post-thumbnail', 750, 9999 );
-		add_image_size( 'post-single', 1450, 9999 );
+		add_image_size( 'post-single', 1850, 9999 );
 		add_image_size( 'widget-posts', 100, 9999 );
 
 		/**

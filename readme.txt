@@ -1,7 +1,7 @@
 === noa ===
 
 Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, grid-layout,right-sidebar, left-sidebar, custom-colors, footer.widgets, photography, full-width-temaplate
 
 Requires at least: 4.5
 Tested up to: 4.8
