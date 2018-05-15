@@ -3,7 +3,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Project-Id-Version: noa\n"
 "POT-Creation-Date: 2018-04-04 14:35+0200\n"
-"PO-Revision-Date: 2018-04-18 14:05+0200\n"
+"PO-Revision-Date: 2018-05-15 09:58+0200\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -144,7 +144,7 @@ msgstr ""
 #: inc/template-tags.php:82
 msgctxt "list item separator"
 msgid " / "
-msgstr ""
+msgstr "Comentario"
 
 #. translators: %s: post title
 #: inc/template-tags.php:95
@@ -244,6 +244,8 @@ msgid ""
 "Theme thought for photography or photo blog, that's why priority is given to "
 "the highlighting of the images."
 msgstr ""
+"Tema pensado para fotografía o blog de fotos, por eso se da prioridad al "
+"resaltado de las imágenes."
 
 #. Author of the plugin/theme
 msgid "Underscores.me"

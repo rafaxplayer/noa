@@ -59,7 +59,7 @@ if ( ! function_exists( 'noa_comments_count' ) ) :
 	function noa_comments_count() {
 
 		$noa_comment_count = get_comments_number();
-		printf('<span class="comments-count">%1$s</span>',$noa_comment_count);
+		printf('<span class="comments-count">%1$s</span>',esc_html($noa_comment_count));
 
 	}
 endif;
@@ -125,10 +125,10 @@ if ( ! function_exists( 'noa_post_thumbnail' ) ) :
 			?>
 
 			<div class="post-thumbnail">
-				<?php if(has_post_thumbnail( )):
-					the_post_thumbnail('post-single'); 
+				<?php if(has_post_thumbnail()):
+					the_post_thumbnail('full'); 
 				else:?>
-					<img src="<?php echo get_template_directory_uri().'/assets/images/placeholder-single.png' ?>" alt="paceholder image">
+					<img src="<?php echo esc_url(get_template_directory_uri()).'/assets/images/placeholder-single.png' ?>" alt="paceholder image">
 				<?php endif; ?>
 			</div><!-- .post-thumbnail -->
 
@@ -142,7 +142,7 @@ if ( ! function_exists( 'noa_post_thumbnail' ) ) :
 					) ),
 				) );
 			else:?>
-				<img src="<?php echo get_template_directory_uri().'/assets/images/placeholder-thumb.png' ?>" alt="paceholder image">
+				<img src="<?php echo  esc_url(get_template_directory_uri()).'/assets/images/placeholder-thumb.png' ?>" alt="paceholder image">
 			<?php endif; ?>
 		
 		<?php

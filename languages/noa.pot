@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: noa\n"
-"POT-Creation-Date: 2018-04-04 14:35+0200\n"
+"POT-Creation-Date: 2018-05-15 09:56+0200\n"
 "PO-Revision-Date: 2018-04-04 14:35+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -64,7 +64,7 @@ msgstr ""
 msgid "What do you think?"
 msgstr ""
 
-#: footer.php:82
+#: footer.php:83
 #, php-format
 msgid "Theme: Noa by <a href=\"%1$s\">rafax</a>."
 msgstr ""
@@ -113,15 +113,15 @@ msgstr ""
 msgid "Facebook Url"
 msgstr ""
 
-#: inc/customizer.php:77
+#: inc/customizer.php:75
 msgid "Twitter Url"
 msgstr ""
 
-#: inc/customizer.php:91
+#: inc/customizer.php:87
 msgid "Linkedin Url"
 msgstr ""
 
-#: inc/customizer.php:105
+#: inc/customizer.php:101
 msgid "Whatsapp Phone number"
 msgstr ""
 
@@ -159,14 +159,6 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: searchform.php:2
-msgid "Enter text to search"
-msgstr ""
-
-#: searchform.php:3
-msgid "Search"
-msgstr ""
-
 #: single.php:23
 msgid "Previous"
 msgstr ""
@@ -198,12 +190,12 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:24 template-parts/content.php:61
+#: template-parts/content-page.php:28 template-parts/content.php:61
 msgid "Pages:"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: template-parts/content-page.php:37
+#: template-parts/content-page.php:41
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
@@ -226,10 +218,6 @@ msgstr ""
 msgid "noa"
 msgstr ""
 
-#. Theme URI of the plugin/theme
-msgid "https://juanrafaelsimarro.com/"
-msgstr ""
-
 #. Description of the plugin/theme
 msgid ""
 "Theme thought for photography or photo blog, that's why priority is given to "
@@ -237,9 +225,9 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Underscores.me"
+msgid "J Rafael simarro"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https:/juanrafaelsimarro.com/"
+msgid "https://juanrafaelsimarro.com/"
 msgstr ""

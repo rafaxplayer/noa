@@ -4,7 +4,7 @@ Theme URI:
 Author: J Rafael simarro
 Author URI: https://juanrafaelsimarro.com/
 Description: Theme thought for photography or photo blog, that's why priority is given to the highlighting of the images.
-Version: 1.2.1
+Version: 1.2.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: noa
@@ -1223,6 +1223,7 @@ a:active {
 
 .post .entry-header {
     position: relative;
+    margin: 0 auto;
 }
 
 .post .image-info {

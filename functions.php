@@ -39,7 +39,7 @@ if ( ! function_exists( 'noa_setup' ) ) :
 		* Image sizes
 		*/
 		add_image_size( 'post-thumbnail', 750, 9999 );
-		add_image_size( 'post-single', 1850, 9999 );
+		
 		add_image_size( 'widget-posts', 100, 9999 );
 
 		/**
@@ -168,7 +168,7 @@ function noa_scripts() {
 
 	wp_enqueue_script( 'noa-masonry', get_template_directory_uri() . '/assets/js/masonry.pkgd.min.js', array('jquery'), '4.2.1', true );
 
-	wp_enqueue_script( 'noa-aos-js', get_template_directory_uri() . '/assets/js/aos.js', array('jquery'), '2.0.0', true );
+	wp_enqueue_script( 'noa-aos-js', get_template_directory_uri() . '/assets/js/aos.min.js', array('jquery'), '2.0.0', true );
 
 	wp_enqueue_script( 'noa-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 

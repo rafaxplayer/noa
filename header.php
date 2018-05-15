@@ -24,20 +24,20 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'noa' ); ?></a>
 	
-<header id="masthead" class="site-header" style="background-image: url( <?php echo get_header_image(); ?> );">
+<header id="masthead" class="site-header" style="background-image: url( <?php echo esc_url(get_header_image()); ?> );">
 
 		<?php get_search_form(); ?>
 
 		<div class="site-branding">
 
 			<?php the_custom_logo(); ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html(get_bloginfo( 'name' )); ?></a></h1>
 			<?php
 		
 			$noa_description = get_bloginfo( 'description', 'display' );
 			if ( $noa_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $noa_description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-description"><?php echo esc_html($noa_description); /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 		

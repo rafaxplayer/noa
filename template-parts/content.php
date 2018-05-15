@@ -33,7 +33,7 @@
 			<?php noa_post_thumbnail(); ?>
 			<a href="<?php the_permalink(); ?>" rel="bookmark">
 			<div class="info">
-				<?php if(is_sticky() ): echo '<span class="sticky-icon">'. __( 'Sticky post', 'noa' ) .'</span>'; endif?>
+				<?php if(is_sticky() ): echo '<span class="sticky-icon">'. esc_html__( 'Sticky post', 'noa' ) .'</span>'; endif?>
 				<?php the_title( '<h2 class="entry-title">', '</h2>' );?>
 				<div class="meta">
 					<?php noa_post_date(); noa_comments_count(); ?>

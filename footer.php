@@ -36,49 +36,50 @@
 
 		<!-- Social icons -->
 		<div class="social">
-			<?php if( !empty(get_theme_mod('noa_instagram_url','') )): ?>
+			<?php if( strlen(get_theme_mod('noa_instagram_url','')) > 0 ): ?>
 				<a href="<?php echo esc_url(get_theme_mod('noa_instagram_url','')); ?>" target="_blank">
 					<span class="instagram" ></span>
 				</a>
 			<?php endif; ?>
 
-			<?php if( !empty(get_theme_mod('noa_pinterest_url','') )): ?>
+			<?php if( get_theme_mod('noa_pinterest_url','') ): ?>
 				<a href="<?php echo esc_url(get_theme_mod('noa_pinterest_url','')); ?>" target="_blank">
 					<span class="pinterest" ></span>
 				</a>
 			<?php endif; ?>
 
-			<?php if( !empty(get_theme_mod('noa_facebook_url','') )): ?>
+			<?php if( get_theme_mod('noa_facebook_url','') ): ?>
 				<a href="<?php echo esc_url(get_theme_mod('noa_facebook_url','')); ?>" target="_blank">
 					<span class="facebook" ></span>
 				</a>
 			<?php endif; ?>
 
 
-			<?php if( !empty(get_theme_mod('noa_twitter_url','') )): ?>
+			<?php if( get_theme_mod('noa_twitter_url','') ): ?>
 				<a href="<?php echo esc_url(get_theme_mod('noa_twitter_url','')); ?>" target="_blank">
 					<span class="twitter" ></span>
 				</a>
 			<?php endif; ?>
 
-			<?php if( !empty(get_theme_mod('noa_linkedin_url','') )): ?>
+			<?php if( get_theme_mod('noa_linkedin_url','') ): ?>
 				<a href="<?php echo esc_url(get_theme_mod('noa_linkedin_url','')); ?>" target="_blank">
 					<span class="linkedin" ></span>
 				</a>
 			<?php endif; ?>
 
-			<?php if( !empty(get_theme_mod('noa_whatsapp_number','') )): ?>
-			<a href="https://api.whatsapp.com/send?phone=<?php echo get_theme_mod('noa_whatsapp_number',''); ?>" target="_blank">
+			<?php if( get_theme_mod('noa_whatsapp_number','') ): ?>
+			<a href="https://api.whatsapp.com/send?phone=<?php echo esc_html(get_theme_mod('noa_whatsapp_number','')); ?>" target="_blank">
 				<span class="whatsapp" ></span>
 			</a>
 			<?php endif; ?>
 		</div>
 		<div class="site-info">
 			
-				<?php printf( '&copy; %1$s %2$s', date('Y') , get_bloginfo( 'name' ) ); ?>
+				<?php printf( '&copy; %1$s %2$s', esc_html( date('Y') ), esc_html(get_bloginfo( 'name' ) ) ); ?>
 			
 			<span class="sep"> | </span>
 				<?php 
+					/*Theme and autor info*/
 					printf( __( 'Theme: Noa by <a href="%1$s">rafax</a>.', 'noa' ), 'https://juanrafaelsimarro.com/' );
 				?>
 		</div><!-- .site-info -->
