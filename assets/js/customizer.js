@@ -14,9 +14,16 @@
             $('.site-title a').text(to);
         });
     });
+
     wp.customize('blogdescription', function(value) {
         value.bind(function(to) {
             $('.site-description').text(to);
+        });
+    });
+
+    wp.customize('noa_header_button_text', function(value) {
+        value.bind(function(to) {
+            $('.header-button').text(to);
         });
     });
 
@@ -25,18 +32,21 @@
         value.bind(function(to) {
             if ('blank' === to) {
                 $('.site-title, .site-description').css({
-                    'clip': 'rect(1px, 1px, 1px, 1px)',
-                    'position': 'absolute'
+                    'display': 'none'
+                });
+                $('.site-titles').css({
+                    'padding': '0'
                 });
             } else {
                 $('.site-title, .site-description').css({
-                    'clip': 'auto',
-                    'position': 'relative'
+                    'display': 'block'
                 });
+
                 $('.site-title a, .site-description').css({
                     'color': to
                 });
             }
         });
     });
+
 })(jQuery);

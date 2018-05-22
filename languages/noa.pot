@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: noa\n"
-"POT-Creation-Date: 2018-05-15 09:56+0200\n"
+"POT-Creation-Date: 2018-05-22 10:15+0200\n"
 "PO-Revision-Date: 2018-04-04 14:35+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -31,61 +31,61 @@ msgid ""
 "below or a search?"
 msgstr ""
 
-#: archive.php:38 index.php:49 search.php:40
+#: archive.php:38 inc/template-functions.php:48 search.php:41
 msgid "Old"
 msgstr ""
 
-#: archive.php:39 index.php:50 search.php:41
+#: archive.php:39 inc/template-functions.php:49 search.php:42
 msgid "New"
 msgstr ""
 
-#: archive.php:40 index.php:51 search.php:42 single.php:25
+#: archive.php:40 inc/template-functions.php:50 search.php:43 single.php:25
 msgid "Post navigation"
 msgstr ""
 
 #. translators: 1: title.
-#: comments.php:35
+#: comments.php:38
 msgid "One Comment"
 msgstr ""
 
 #. translators: 1: comment count number, 2: title.
-#: comments.php:41
+#: comments.php:44
 #, php-format
 msgid "%s Comment"
 msgid_plural "%s Comments"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:66
+#: comments.php:69
 msgid "Comments are closed."
 msgstr ""
 
-#: comments.php:72
+#: comments.php:75
 msgid "What do you think?"
 msgstr ""
 
 #: footer.php:83
 #, php-format
-msgid "Theme: Noa by <a href=\"%1$s\">rafax</a>."
+msgid "Theme: Noa by <a href=\"%s\">j.r.s</a>."
 msgstr ""
 
-#: functions.php:59
+#: functions.php:60
 msgid "Primary"
 msgstr ""
 
-#: functions.php:120
+#: functions.php:121
 msgid "Footer Widgets 1"
 msgstr ""
 
-#: functions.php:122 functions.php:132 functions.php:142
+#: functions.php:123 functions.php:133 functions.php:143
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:130
+#: functions.php:131
 msgid "Footer Widgets 2"
 msgstr ""
 
-#: functions.php:140
+#: functions.php:141
 msgid "Footer Widgets 3"
 msgstr ""
 
@@ -93,78 +93,123 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: inc/customizer.php:22
+#: inc/customizer.php:33
+msgid "Animation for title and description"
+msgstr ""
+
+#: inc/customizer.php:45
+msgid "Theme options"
+msgstr ""
+
+#: inc/customizer.php:54
+msgid "Blog pagination options"
+msgstr ""
+
+#: inc/customizer.php:57
+msgid "Set pagination type on posts list"
+msgstr ""
+
+#: inc/customizer.php:68
+msgid "Pagination Type"
+msgstr ""
+
+#: inc/customizer.php:72
+msgid "Old/New (Default)"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "Numerical"
+msgstr ""
+
+#: inc/customizer.php:83
 msgid "Social icons"
 msgstr ""
 
-#: inc/customizer.php:24
+#: inc/customizer.php:86
 msgid "Set url for social icons footer, with hidde icon set empty value."
 msgstr ""
 
-#: inc/customizer.php:35
+#: inc/customizer.php:97
 msgid "Instagram Url"
 msgstr ""
 
-#: inc/customizer.php:49
+#: inc/customizer.php:111
 msgid "Pinterest Url"
 msgstr ""
 
-#: inc/customizer.php:63
+#: inc/customizer.php:125
 msgid "Facebook Url"
 msgstr ""
 
-#: inc/customizer.php:75
+#: inc/customizer.php:137
 msgid "Twitter Url"
 msgstr ""
 
-#: inc/customizer.php:87
+#: inc/customizer.php:149
 msgid "Linkedin Url"
 msgstr ""
 
-#: inc/customizer.php:101
+#: inc/customizer.php:163
 msgid "Whatsapp Phone number"
 msgstr ""
 
+#: inc/template-functions.php:57 single.php:23
+msgid "Previous"
+msgstr ""
+
+#: inc/template-functions.php:58 single.php:24
+msgid "Next"
+msgstr ""
+
+#: inc/template-functions.php:59
+msgid "Page"
+msgstr ""
+
+#: inc/template-functions.php:82
+msgid "None (Default)"
+msgstr ""
+
 #. translators: %s: post author.
-#: inc/template-tags.php:46
+#: inc/template-tags.php:47
 #, php-format
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:75
+#: inc/template-tags.php:76
 msgid " / "
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:82
+#: inc/template-tags.php:83
 msgctxt "list item separator"
 msgid " / "
 msgstr ""
 
 #. translators: %s: post title
-#: inc/template-tags.php:95
+#: inc/template-tags.php:96
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:107
+#: inc/template-tags.php:108
 msgid "Edit"
 msgstr ""
 
 #. translators: %s: search query.
-#: search.php:22
+#: search.php:23
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: single.php:23
-msgid "Previous"
+#: searchform.php:2
+msgid "Search"
 msgstr ""
 
-#: single.php:24
-msgid "Next"
+#: searchform.php:3
+msgctxt "search words"
+msgid "Search"
 msgstr ""
 
 #: template-parts/content-none.php:14
@@ -210,7 +255,7 @@ msgstr ""
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
-#: widgets/recent-post-thumbnails.php:16
+#: widgets/recent-post-thumbnails.php:17
 msgid "Recent Posts"
 msgstr ""
 

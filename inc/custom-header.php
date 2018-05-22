@@ -16,16 +16,22 @@
  *
  * @uses noa_header_style()
  */
+
+if ( ! defined( 'ABSPATH' ) ) { exit; }
+
 function noa_custom_header_setup() {
+
 	add_theme_support( 'custom-header', apply_filters( 'noa_custom_header_args', array(
-		'default-image'          => '',
-		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'default-image'          => trailingslashit( get_stylesheet_directory_uri() ). '/assets/images/header.jpg',
+		'default-text-color'     => 'fff',
+		'width'                  => 1920,
+		'height'                 => 1080,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'noa_header_style',
+		'flex-width'             => true,
+		'wp-head-callback'       => 'noa_header_style'
 	) ) );
 }
+
 add_action( 'after_setup_theme', 'noa_custom_header_setup' );
 
 if ( ! function_exists( 'noa_header_style' ) ) :
@@ -59,6 +65,7 @@ if ( ! function_exists( 'noa_header_style' ) ) :
 			.site-title a,
 			.site-description {
 				display:block;
+				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 		<?php endif; ?>
 		</style>

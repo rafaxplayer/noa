@@ -6,6 +6,7 @@
  *
  * @package noa
  */
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 get_header();
 ?>

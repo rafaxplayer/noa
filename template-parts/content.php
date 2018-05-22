@@ -6,7 +6,7 @@
  *
  * @package noa
  */
-
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> data-aos="fade-up" data-aos-duration="800" data-aos-once="true">

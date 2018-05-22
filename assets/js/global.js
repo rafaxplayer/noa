@@ -63,5 +63,8 @@ jQuery(document).ready(function($) {
     $('.wp-block-gallery a').each(function(index) {
         $(this).attr({ 'data-lightbox': 'image-' + index });
     });
+
     AOS.init();
+
+
 });

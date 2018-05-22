@@ -4,20 +4,14 @@ Theme URI:
 Author: J Rafael simarro
 Author URI: https://juanrafaelsimarro.com/
 Description: Theme thought for photography or photo blog, that's why priority is given to the highlighting of the images.
-Version: 1.2.2
+Version: 1.2.5
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: noa
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, grid-layout,right-sidebar, left-sidebar, custom-colors, footer-widgets, photography, full-width-template
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, grid-layout, custom-colors, footer-widgets, photography, full-width-template
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
-
-noa is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 
@@ -1072,6 +1066,10 @@ a:active {
     margin: 5rem auto;
 }
 
+.page .entry-header {
+    margin-bottom: 5rem;
+}
+
 .page-links {
     clear: both;
     margin: 0 0 1.5em;
@@ -1250,7 +1248,7 @@ a:active {
 }
 
 .post .image-info .entry-title {
-    color: rgb(102, 4, 69);
+    color: white;
     font-weight: 400;
     margin: 0 auto;
     font-size: 3rem;
@@ -1343,6 +1341,16 @@ article.page,
     text-align: center;
     font-size: 3rem;
     position: relative;
+    font-weight: 200;
+    color: #242125;
+    letter-spacing: -2px;
+}
+
+@media screen and (min-width: 75rem) {
+    .page .entry-title,
+    .page-title {
+        font-size: 4rem;
+    }
 }
 
 .page .entry-footer {
@@ -1716,11 +1724,6 @@ object {
     transition: all .4s;
 }
 
-.gallery img:hover {
-    -webkit-transform: scale(1.2) rotate(2deg);
-    transform: scale(1.2) rotate(2deg);
-}
-
 .gallery .gallery-item:nth-child(2n+0) {
     grid-column: span 2;
     grid-row: span 2;
@@ -1732,7 +1735,8 @@ object {
 =============================================*/
 
 .posts-navigation,
-.post-navigation {
+.post-navigation,
+.pagination {
     margin: 3rem auto;
 }
 
@@ -1746,7 +1750,8 @@ object {
 }
 
 .post-navigation .nav-links,
-.posts-navigation .nav-links {
+.posts-navigation .nav-links,
+.pagination {
     overflow: hidden;
     padding: .5rem .5rem;
 }
@@ -1781,6 +1786,53 @@ object {
     }
 }
 
+.pagination {
+    padding: 2rem;
+}
+
+.pagination .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.pagination .nav-links .page-numbers {
+    padding: 1.5rem;
+    color: rgb(27, 27, 27);
+    font-weight: 600;
+    -webkit-transition: background-color .4s;
+    transition: background-color .4s;
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+}
+
+.pagination .nav-links .page-numbers.current {
+    color: #f113f1
+}
+
+.pagination .nav-links .page-numbers:hover {
+    background-color: rgb(27, 27, 27);
+    ;
+    color: #999;
+}
+
+@media screen and (min-width: 37.5rem) {
+    .pagination .nav-links {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    .pagination .nav-links .page-numbers {
+        font-size: .8rem;
+    }
+}
+
 
 /*=====  End of Pagination  ======*/
 
@@ -1790,44 +1842,87 @@ object {
 =============================================*/
 
 .site-header {
-    background-color: #440544;
-    background-position: 50% 50%;
+    background-color: #000000;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    min-height: 300px;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+}
+
+.site-header.front {
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.site-header.front>img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: auto;
+    max-width: 1000%;
+    min-height: 100%;
+    min-width: 100%;
+    min-width: 100vw;
+    width: auto;
 }
 
 .site-header .site-branding {
-    margin: 2.5rem auto;
-    max-width: 90%;
-    display: inline-block;
-    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .site-header .site-branding .site-title {
     font-family: 'Pacifico', cursive;
     font-size: 2.5rem;
     margin: 0;
-    font-weight: lighter;
-    text-shadow: 1px 1px #b5b1b1;
-    background-color: rgba(0, 0, 0, 0.2);
-    border: 4px solid purple;
     padding: .5rem 2rem;
 }
 
-.site-header .site-branding .site-title a {
-    color: purple;
-}
-
-.site-header .site-branding .site-title a:hover {
-    color: #4a0248;
-}
-
 .site-header .site-branding .site-description {
-    font-weight: 600;
-    margin-top: 1rem;
+    margin: 0;
     font-size: 1rem;
-    color: #efebee;
+}
+
+.site-header .site-branding .header-button {
+    font-family: serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #e6cde6;
+    background-color: #990f8bb0;
+    margin-top: 2rem;
+    padding: .8rem 3rem;
+    transition: background-color .4s;
+}
+
+.site-header .site-branding .header-button:hover {
+    background-color: #774e73b0;
+    color: white;
 }
 
 .site-header .searchform {
@@ -1836,6 +1931,9 @@ object {
     background-color: black;
     text-align: center;
     display: none;
+    -webkit-box-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
 }
 
 .site-header .searchform .s {
@@ -1843,7 +1941,7 @@ object {
     line-height: 5;
     background: none;
     border: none;
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 0 auto;
 }
 
@@ -1857,10 +1955,10 @@ object {
 
 @media screen and (min-width: 37.5rem) {
     .site-header .site-branding .site-title {
-        font-size: 4.5rem;
+        font-size: 3.5rem;
     }
     .site-header .site-branding .site-description {
-        font-size: 1.2rem;
+        font-size: .9rem;
     }
 }
 
@@ -1957,7 +2055,8 @@ object {
 .site-footer .footer-widgets .widget-title {
     font-family: 'Pacifico', cursive;
     margin: 0;
-    font-weight: 200;
+    font-weight: 400;
+    font-size: 1.5rem;
     background-color: black;
     padding: .5rem 1rem;
     position: relative;
@@ -2231,3 +2330,165 @@ object {
 
 
 /*=====  End of 404  ======*/
+
+
+/*=============================================
+=            animations            =
+=============================================*/
+
+.animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100px, 0);
+        transform: translate3d(0, -100px, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100px, 0);
+        transform: translate3d(0, -100px, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100px, 0);
+        transform: translate3d(0, 100px, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100px, 0, 0);
+        transform: translate3d(-100px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-100px, 0, 0);
+        transform: translate3d(-100px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInLeft {
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(100px, 0, 0);
+        transform: translate3d(100px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(100px, 0, 0);
+        transform: translate3d(100px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.fadeInRight {
+    -webkit-animation-name: fadeInRight;
+    animation-name: fadeInRight;
+}
+
+
+/*=====  End of animations  ======*/

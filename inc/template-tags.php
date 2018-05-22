@@ -6,6 +6,7 @@
  *
  * @package noa
  */
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 if ( ! function_exists( 'noa_post_date' ) ) :
 	/**

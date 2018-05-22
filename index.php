@@ -11,7 +11,7 @@
  *
  * @package noa
  */
-
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 get_header();
 ?>
 
@@ -44,13 +44,18 @@ get_header();
 
 				<?php endwhile;?>
 			</div>
+			
+			<?php 
+				noa_pagination();
+				/* the_posts_pagination( array(
+					'prev_text'          => '<i class="fa fa-angle-left"></i> ' . esc_html__( 'Previous', 'noa' ),
+					'next_text'          => esc_html__( 'Next', 'noa' ) . ' <i class="fa fa-angle-right"></i>',
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'noa' ) . ' </span>',
+				) ); */
 
-			<?php the_posts_navigation(array(
-				'prev_text'                  => __( 'Old','noa'),
-				'next_text'                  => __( 'New','noa' ),
-				'screen_reader_text' => __( 'Post navigation','noa' ),
-			) );
+			
 
+			
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );

@@ -8,7 +8,7 @@
  *
  * @package noa
  */
-
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -23,22 +23,27 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'noa' ); ?></a>
-	
-<header id="masthead" class="site-header" style="background-image: url( <?php echo esc_url(get_header_image()); ?> );">
-
+<?php $frontclass = is_front_page() || is_home() ? 'front' : ''; ?>
+<header id="masthead" class="site-header <?php echo $frontclass; ?>" style="background-image: url( <?php echo esc_url(get_header_image()); ?> );">
+		 
 		<?php get_search_form(); ?>
-
-		<div class="site-branding">
+		
+		<div class="site-branding <?php echo esc_attr(noa_branding_animation()); ?>">
 
 			<?php the_custom_logo(); ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo esc_html(get_bloginfo( 'name' )); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php
 		
 			$noa_description = get_bloginfo( 'description', 'display' );
 			if ( $noa_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo esc_html($noa_description); /* WPCS: xss ok. */ ?></p>
+				<p class="site-description"><?php echo $noa_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
+
+			<?php if ((is_front_page() || is_home()) && get_theme_mod('noa_header_button', true)): ?>
+				<a href="<?php get_theme_mod('noa_header_button_link', esc_url(home_url( '/'))); ?>" class="header-button"><?php esc_html_e(get_theme_mod('noa_header_button_text', __('Enter Text','noa')));?></a>
+			<?php endif; ?>
+
 		</div><!-- .site-branding -->
 		
 		<nav id="site-navigation" class="main-navigation">

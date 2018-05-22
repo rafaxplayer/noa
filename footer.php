@@ -8,7 +8,7 @@
  *
  * @package noa
  */
-
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 ?>
 
 	</div><!-- #content -->
@@ -80,7 +80,7 @@
 			<span class="sep"> | </span>
 				<?php 
 					/*Theme and autor info*/
-					printf( __( 'Theme: Noa by <a href="%1$s">rafax</a>.', 'noa' ), 'https://juanrafaelsimarro.com/' );
+					printf( __( 'Theme: Noa by <a href="%s">j.r.s</a>.', 'noa' ), 'https://juanrafaelsimarro.com/' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

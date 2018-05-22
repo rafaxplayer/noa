@@ -6,6 +6,7 @@
  *
  * @package noa
  */
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 if ( ! function_exists( 'noa_setup' ) ) :
 	/**
@@ -152,23 +153,24 @@ add_action( 'widgets_init', 'noa_widgets_init' );
  * Enqueue scripts and styles.
  */
 function noa_scripts() {
+	
 	wp_enqueue_style( 'noa-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'noa-googlefont-pacifico', 'https://fonts.googleapis.com/css?family=Pacifico' );
+	wp_enqueue_style( 'googlefont-pacifico', 'https://fonts.googleapis.com/css?family=Pacifico' );
 	
-	wp_enqueue_style( 'noa-googlefont-montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i' );
+	wp_enqueue_style( 'googlefont-montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i' );
 
-	wp_enqueue_style( 'noa-aos-css', get_template_directory_uri() .'/assets/css/aos.css' );
+	wp_enqueue_style( 'aos-css', get_template_directory_uri() .'/assets/css/aos.css' );
 
-	wp_enqueue_style('noa-lightbox-css', get_template_directory_uri() . '/assets/css/lightbox.min.css'); // Enqueue it!
+	wp_enqueue_style('lightbox-css', get_template_directory_uri() . '/assets/css/lightbox.min.css'); // Enqueue it!
 
-	wp_enqueue_script( 'noa-lightbox', get_template_directory_uri() . '/assets/js/lightbox.min.js', array('jquery'), '2.10.0', true );
+	wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/assets/js/lightbox.min.js', array('jquery'), '2.10.0', true );
 
-	wp_enqueue_script( 'noa-imagesloader', get_template_directory_uri() . '/assets/js/imagesloaded.pkgd.min.js', array(), '3.1.8', true );
+	wp_enqueue_script( 'imagesloader', get_template_directory_uri() . '/assets/js/imagesloaded.pkgd.min.js', array(), '3.1.8', true );
 
-	wp_enqueue_script( 'noa-masonry', get_template_directory_uri() . '/assets/js/masonry.pkgd.min.js', array('jquery'), '4.2.1', true );
+	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/assets/js/masonry.min.js', array('jquery'), '4.2.1', true );
 
-	wp_enqueue_script( 'noa-aos-js', get_template_directory_uri() . '/assets/js/aos.min.js', array('jquery'), '2.0.0', true );
+	wp_enqueue_script( 'aos-js', get_template_directory_uri() . '/assets/js/aos.min.js', array('jquery'), '2.0.0', true );
 
 	wp_enqueue_script( 'noa-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 

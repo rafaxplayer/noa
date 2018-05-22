@@ -4,6 +4,7 @@
  *
  * Adds different formatting to the default WordPress Recent Posts Widget
  */
+if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 Class Noa_Recent_Posts_Widget extends WP_Widget_Recent_Posts {
 
