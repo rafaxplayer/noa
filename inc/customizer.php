@@ -11,7 +11,7 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 
-if ( ! defined( 'ABSPATH' ) ) { exit; }
+if ( !defined( 'ABSPATH' ) ) { exit; }
 
 function noa_customize_register( $wp_customize ) {
 
@@ -62,11 +62,12 @@ function noa_customize_register( $wp_customize ) {
 	));
 	
 	$wp_customize->add_control( 'noa_header_button_control', array(
-		'label'      => esc_html__( 'Show Header button', 'solido' ),
+		'label'      => esc_html__( 'Show Header button', 'noa' ),
 		'section'    => 'noa_header_button_section',
 		'settings'   => 'noa_header_button',
-		'description'=> esc_html__('Show or hide header button , It will only be shown on the blog page or front page','solido'),
+		'description'=> esc_html__('Show or hide header button , It will only be shown on the blog page or front page','noa'),
 		'type' => 'checkbox',
+		
 					
 	));
 
@@ -89,14 +90,52 @@ function noa_customize_register( $wp_customize ) {
 	));
 
 	$wp_customize->add_control( 'noa_header_button_link_control', array(
-		'label'      => esc_html__( 'Text Button', 'noa' ),
+		'label'      => esc_html__( 'Link for Button', 'noa' ),
 		'section'    => 'noa_header_button_section',
 		'settings'   => 'noa_header_button_link',
 		'description'=> esc_html__('Set link for button header','noa'),
 					
 	));
+
+	$wp_customize->add_setting( 'noa_header_button_color' , array(
+		'default' => '#a80054',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize,'noa_header_button_color_control', array(
+		'label'      => esc_html__( 'Color for button ', 'noa' ),
+		'section'    => 'noa_header_button_section',
+		'settings'   => 'noa_header_button_color',
+		'description'=> esc_html__('Set color button header','noa'),
+	)));
+
+	$wp_customize->add_setting( 'noa_header_button_color_hover' , array(
+		'default' => '#e6cde6',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize,'noa_header_button_color_hover_control', array(
+		'label'      => esc_html__( 'Color for button header hover', 'noa' ),
+		'section'    => 'noa_header_button_section',
+		'settings'   => 'noa_header_button_color_hover',
+		'description'=> esc_html__('Set color for button header hover','noa'),
+	)));
+
+	$wp_customize->add_setting( 'noa_header_button_textcolor' , array(
+		'default' => '#e6cde6',
+		'sanitize_callback' => 'sanitize_hex_color',
+	));
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize,'noa_header_button_textcolor_control', array(
+		'label'      => esc_html__( 'Color text for button header ', 'noa' ),
+		'section'    => 'noa_header_button_section',
+		'settings'   => 'noa_header_button_textcolor',
+		'description'=> esc_html__('Set color text with button header','noa'),
+	)));
+
+
 	
-	
+
 	/*
 	* Pagination
 	*/
@@ -261,16 +300,7 @@ function noa_customize_partial_header_button_text(){
 	return get_theme_mod('noa_header_button_text');
 }
 
-/**
- * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
- */
-function noa_customize_preview_js() {
 
-	wp_enqueue_script( 'noa-customizer-options', get_template_directory_uri() . '/assets/js/options.js', array( 'jquery' ), '20151215', true );
-	wp_enqueue_script( 'noa-customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'jquery' ), '20151215', true );
-	
-}
-add_action( 'customize_preview_init', 'noa_customize_preview_js' );
 
 /**
  * noa sanitization

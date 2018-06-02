@@ -3,7 +3,7 @@
 Contributors: automattic
 Requires at least: 4.5
 Tested up to: 4.9.5
-version: 1.2.5
+version: 1.2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, grid-layout, custom-colors, footer-widgets, photography, full-width-template
@@ -40,6 +40,12 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 == Changelog ==
+
+= 1.2.8 - May 30 2018 =
+* Minor bug fixes
+
+= 1.2.7 - May 29 2018 =
+* Minor bug fixes
 
 = 1.2.6 - May 22 2018 =
 * Minor bug fixes
