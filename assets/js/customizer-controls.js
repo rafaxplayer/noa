@@ -6,6 +6,7 @@
         //initialize
         button_header_check();
         site_branding_check();
+        
 
         function button_header_check() {
             // array controls ids
@@ -42,6 +43,7 @@
                 })
             }
         }
+        
 
         // on change values....
         wp.customize.control('noa_header_button_control', function(control) {
@@ -60,7 +62,15 @@
 
         });
 
+        /* $('input[data-input-type]').on('input change', function () {
+            var val = $(this).val();
+            $(this).prev('.cs-range-value').html(val);
+            $(this).val(val);
+        }); */
+
     });
+
+    
 
 
 })(jQuery);

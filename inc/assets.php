@@ -21,7 +21,7 @@ function noa_scripts() {
 	wp_enqueue_style( 'aos-css', get_template_directory_uri() .'/assets/css/aos.css' );
 
 	wp_enqueue_style('lightbox-css', get_template_directory_uri() . '/assets/css/lightbox.min.css'); // Enqueue it!
-
+	
 	wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/assets/js/lightbox.min.js', array('jquery'), '2.10.0', true );
 
 	wp_enqueue_script( 'imagesloader', get_template_directory_uri() . '/assets/js/imagesloaded.pkgd.min.js', array(), '3.1.8', true );
@@ -37,6 +37,8 @@ function noa_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+
 }
 add_action( 'wp_enqueue_scripts', 'noa_scripts' );
 

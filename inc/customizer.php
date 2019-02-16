@@ -13,6 +13,12 @@
 
 if ( !defined( 'ABSPATH' ) ) { exit; }
 
+if ( class_exists( 'WP_Customize_Control' ) ) {
+	// add control range class
+	require_once  dirname( __FILE__ ) . '/class-customizer-range-value-control/class-customizer-range-value-control.php';
+	require_once  dirname( __FILE__ ) . '/class-customizer-toggle-control/class-customizer-toggle-control.php';
+}
+
 function noa_customize_register( $wp_customize ) {
 
 	$wp_customize->get_setting( 'blogname' )->transport         	= 'postMessage';
@@ -60,16 +66,16 @@ function noa_customize_register( $wp_customize ) {
 		'default' => true,
 		'sanitize_callback' => 'noa_sanitize_checkbox',
 	));
-	
-	$wp_customize->add_control( 'noa_header_button_control', array(
+		
+
+	$wp_customize->add_control( new Customizer_Toggle_Control( $wp_customize, 'noa_header_button_control', array(
 		'label'      => esc_html__( 'Show Header button', 'noa' ),
 		'section'    => 'noa_header_button_section',
 		'settings'   => 'noa_header_button',
 		'description'=> esc_html__('Show or hide header button , It will only be shown on the blog page or front page','noa'),
-		'type' => 'checkbox',
-		
-					
-	));
+		'type'        => 'ios',// light, ios, flat
+	 )));
+
 
 	$wp_customize->add_setting( 'noa_header_button_text' , array(
 		'default' => esc_html__('Button Text','noa'),
@@ -132,10 +138,7 @@ function noa_customize_register( $wp_customize ) {
 		'settings'   => 'noa_header_button_textcolor',
 		'description'=> esc_html__('Set color text with button header','noa'),
 	)));
-
-
 	
-
 	/*
 	* Pagination
 	*/
@@ -163,6 +166,54 @@ function noa_customize_register( $wp_customize ) {
 		)
 		
 	));
+
+	/*
+	* Layout options section
+	*/
+	$wp_customize->add_section( 'noa_layout_section' , array(
+		'title'       => esc_html__( 'Layout options', 'noa' ),
+		'panel'		=> 'noa_theme_options_panel',
+		'priority'    => 35,
+		'description' => esc_html__('Set layout options','noa'),
+		
+	));
+
+	/*Layout width*/     
+	$wp_customize->add_setting( 'noa_content_width', array( 
+		'sanitize_callback' => 'noa_sanitize_number_absint',
+		'default' => 1675,
+		'transport'	 => 'postMessage',
+	));
+	
+
+	$wp_customize->add_control( new Customizer_Range_Value_Control($wp_customize,'noa_layout_witch_control',
+			array(
+				'label'      => esc_html__( 'Content witch in pixels', 'noa' ),
+        		'section'    => 'noa_layout_section',
+				'settings'    => 'noa_content_width',
+				'input_attrs' => array(
+					'min' => 500,
+					'max' => 5000,
+					'step'   => 1,
+					'suffix' => 'px',
+				),
+			)
+		)
+	);
+
+	/*Breadcrums*/     
+	$wp_customize->add_setting( 'noa_breadcrumbs', array( 
+		'sanitize_callback' => 'noa_sanitize_checkbox',
+		'default' => true,
+		
+	));
+
+	$wp_customize->add_control( new Customizer_Toggle_Control( $wp_customize, 'noa_breadcrums_control', array(
+		'label'	      => esc_html__( 'Show or hide Breadcrumbs', 'noa' ),
+		'section'     => 'noa_layout_section',
+		'settings'    => 'noa_breadcrumbs',
+		'type'        => 'ios',// light, ios, flat
+	 )));
 
 
 	/*
@@ -301,7 +352,6 @@ function noa_customize_partial_header_button_text(){
 }
 
 
-
 /**
  * noa sanitization
  */
@@ -313,3 +363,15 @@ function noa_sanitize_checkbox($value){
 	return false;
 
 }
+
+function noa_sanitize_number_absint( $number, $setting ) {
+	// Ensure $number is an absolute integer (whole number, zero or greater).
+	$number = absint( $number );
+  
+	// If the input is an absolute integer, return it; otherwise, return the default
+	return ( $number ? $number : $setting->default );
+  }
+
+
+
+  

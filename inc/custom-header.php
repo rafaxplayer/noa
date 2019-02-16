@@ -68,7 +68,7 @@ if ( ! function_exists( 'noa_header_style' ) ) :
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 		<?php endif; ?>
+			
 		</style>
-		<?php
-	}
-endif;
+
+		<?php } endif; ?>

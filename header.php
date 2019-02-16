@@ -40,6 +40,8 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 				<p class="site-description"><?php echo $noa_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 
+			<?php noa_breadcrumbs(); ?>
+
 			<?php if ((is_front_page() || is_home()) && get_theme_mod('noa_header_button', true)): 
 				$linkButton = esc_url( get_theme_mod('noa_header_button_link',home_url( '/')));
 				$textButton = esc_html(get_theme_mod('noa_header_button_text', __('Enter Text','noa')));
@@ -48,6 +50,8 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 			<?php endif; ?>
 
 		</div><!-- .site-branding -->
+
+		
 		
 		<nav id="site-navigation" class="main-navigation">
 			<a href="#" class="menu-toggle" ></a>

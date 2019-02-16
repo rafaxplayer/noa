@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: noa\n"
-"POT-Creation-Date: 2018-05-22 10:16+0200\n"
-"PO-Revision-Date: 2018-05-22 10:55+0200\n"
+"POT-Creation-Date: 2019-02-16 00:47+0100\n"
+"PO-Revision-Date: 2019-02-16 00:47+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -75,19 +75,19 @@ msgstr "Tema: Noa por <a href=\"%1$s\">j.r.s</a>."
 msgid "Primary"
 msgstr "Principal"
 
-#: functions.php:121
+#: functions.php:122
 msgid "Footer Widgets 1"
 msgstr "Pie de pagina widgets 1"
 
-#: functions.php:123 functions.php:133 functions.php:143
+#: functions.php:124 functions.php:134 functions.php:144
 msgid "Add widgets here."
 msgstr "Añade widgets aquí."
 
-#: functions.php:131
+#: functions.php:132
 msgid "Footer Widgets 2"
 msgstr "Pie de pagina widgets 2"
 
-#: functions.php:141
+#: functions.php:142
 msgid "Footer Widgets 3"
 msgstr "Pie de pagina widgets 3"
 
@@ -95,7 +95,11 @@ msgstr "Pie de pagina widgets 3"
 msgid "Skip to content"
 msgstr "Saltar al contenido"
 
-#: inc/customizer.php:33
+#: header.php:45
+msgid "Enter Text"
+msgstr "Introduce texto"
+
+#: inc/customizer.php:34
 msgid "Animation for title and description"
 msgstr "Animación para titulo y descripción"
 
@@ -103,57 +107,129 @@ msgstr "Animación para titulo y descripción"
 msgid "Theme options"
 msgstr "Opciones del tema"
 
-#: inc/customizer.php:54
-msgid "Blog pagination options"
-msgstr "Opciones de paginación del blog"
+#: inc/customizer.php:53
+msgid "Header Button options"
+msgstr "Opciones del botón de cabecera"
 
-#: inc/customizer.php:57
+#: inc/customizer.php:56 inc/customizer.php:146
 msgid "Set pagination type on posts list"
 msgstr "Establece el tipo de paginación en la lista de entradas"
 
+#: inc/customizer.php:65
+msgid "Show Header button"
+msgstr "Mostrar el botón de cabecera"
+
 #: inc/customizer.php:68
+msgid ""
+"Show or hide header button , It will only be shown on the blog page or front "
+"page"
+msgstr ""
+"Mostrar u ocultar el botón de cabecera, solo se mostrara en la pagina de "
+"blog o pagina de inicio"
+
+#: inc/customizer.php:75
+msgid "Button Text"
+msgstr "Texto del botón"
+
+#: inc/customizer.php:81
+msgid "Text Button"
+msgstr "Texto botón"
+
+#: inc/customizer.php:84
+msgid "Set text for button header"
+msgstr "Establecer texto del botón de cabecera"
+
+#: inc/customizer.php:93
+msgid "Link for Button"
+msgstr "Enlace del botón"
+
+#: inc/customizer.php:96
+msgid "Set link for button header"
+msgstr "Establecer enlace del botón de cabecera"
+
+#: inc/customizer.php:106
+msgid "Color for button "
+msgstr "Color del botón "
+
+#: inc/customizer.php:109
+msgid "Set color button header"
+msgstr "Establecer color del botón de cabecera"
+
+#: inc/customizer.php:118
+msgid "Color for button header hover"
+msgstr "Color del botón de cabecera al pasar"
+
+#: inc/customizer.php:121
+msgid "Set color for button header hover"
+msgstr "Establecer color del botón de cabecera al pasar"
+
+#: inc/customizer.php:130
+msgid "Color text for button header "
+msgstr "Color del texto del botón de cabecera "
+
+#: inc/customizer.php:133
+msgid "Set color text with button header"
+msgstr "Establecer color del texto del botón de cabecera"
+
+#: inc/customizer.php:143
+msgid "Blog pagination options"
+msgstr "Opciones de paginación del blog"
+
+#: inc/customizer.php:157
 msgid "Pagination Type"
 msgstr "Tipo de paginación"
 
-#: inc/customizer.php:72
+#: inc/customizer.php:161
 msgid "Old/New (Default)"
 msgstr "Viejo/Nuevo (Por defecto)"
 
-#: inc/customizer.php:73
+#: inc/customizer.php:162
 msgid "Numerical"
 msgstr "Numeral"
 
-#: inc/customizer.php:83
+#: inc/customizer.php:171
+msgid "Layout options"
+msgstr "Opciones de diseño"
+
+#: inc/customizer.php:174
+msgid "Set layout options"
+msgstr "Establece opciones de diseño"
+
+#: inc/customizer.php:198
+msgid "Content witch in pixels"
+msgstr "Ancho del contenido en pixeles"
+
+#: inc/customizer.php:215
 msgid "Social icons"
 msgstr "Iconos redes sociales"
 
-#: inc/customizer.php:86
+#: inc/customizer.php:218
 msgid "Set url for social icons footer, with hidde icon set empty value."
 msgstr ""
 "Establece url para los iconos sociales del pie de pagina. Para ocultar "
 "iconos deja el campo en blanco."
 
-#: inc/customizer.php:97
+#: inc/customizer.php:229
 msgid "Instagram Url"
 msgstr "Instagram enlace"
 
-#: inc/customizer.php:111
+#: inc/customizer.php:243
 msgid "Pinterest Url"
 msgstr "Pinterest enlace"
 
-#: inc/customizer.php:125
+#: inc/customizer.php:257
 msgid "Facebook Url"
 msgstr "Facebook enlace"
 
-#: inc/customizer.php:137
+#: inc/customizer.php:269
 msgid "Twitter Url"
 msgstr "Twitter enlace"
 
-#: inc/customizer.php:149
+#: inc/customizer.php:281
 msgid "Linkedin Url"
 msgstr "LinkedIn enlace"
 
-#: inc/customizer.php:163
+#: inc/customizer.php:295
 msgid "Whatsapp Phone number"
 msgstr "Whatsapp numero de teléfono"
 
@@ -208,7 +284,6 @@ msgid "Search Results for: %s"
 msgstr "Resultados de búsqueda para: %s"
 
 #: searchform.php:2
-#, fuzzy
 msgid "Search"
 msgstr "Buscar"
 
@@ -290,6 +365,3 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://juanrafaelsimarro.com/"
 msgstr ""
-
-#~ msgid "Enter text to search"
-#~ msgstr "Introduce texto a buscar"
