@@ -103,7 +103,7 @@ if( !function_exists('noa_breadcrumbs') ):
             $blogname = get_option( 'page_for_posts' )==0 ? 'Blog': get_the_title(get_option( 'page_for_posts' ));
             $bloglink = get_option( 'page_for_posts' )==0 ? esc_url( home_url( '/' ) ) : get_permalink( get_option( 'page_for_posts' ) );
             echo '<div id="noa_breadcrumbs">';
-            printf('<a href="%1$s" >%2$s</a>%3$s',get_option('home'),get_bloginfo('name'), $separator);
+            printf('<a href="%1$s" >%2$s</a>%3$s',home_url(),get_bloginfo('name'), $separator);
             if (!is_home()){
                 /* no es el blog index.php*/
                
@@ -132,6 +132,6 @@ if( !function_exists('noa_breadcrumbs') ):
         endif;
     }
  
-    add_action( 'hikari_action_breadcrumbs','hikari_breadcrumbs');
+    add_action( 'noa_action_breadcrumbs','noa_breadcrumbs');
 endif;
 

@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 				<p class="site-description"><?php echo $noa_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 
-			<?php noa_breadcrumbs(); ?>
+			<?php do_action('noa_action_breadcrumbs'); ?>
 
 			<?php if ((is_front_page() || is_home()) && get_theme_mod('noa_header_button', true)): 
 				$linkButton = esc_url( get_theme_mod('noa_header_button_link',home_url( '/')));

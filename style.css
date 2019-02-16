@@ -2012,13 +2012,13 @@ object {
 /* ## Button Up*/
 
 .site-footer .button-up {
-    width: 80px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: rgba(0, 0, 0, 0.8);
     background-image: url(assets/icons/chevron-up.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 30px;
+    background-size: 18px;
     position: fixed;
     right: -80px;
     bottom: 5rem;
