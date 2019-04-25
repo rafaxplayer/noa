@@ -25,6 +25,7 @@ function noa_dynamic_styles(){
        .content-area{
 				margin:0 auto;
 				max-width: <?php echo get_theme_mod('noa_content_width', 1675);?>px;
+				
 			}
    </style>
 

@@ -57,4 +57,10 @@
         });
     });
 
+    wp.customize('noa_content_width', function(value) {
+        value.bind(function(to) {
+            $('.content-area').css({'max-width':to+'px'});
+        });
+    });
+
 })(jQuery);
