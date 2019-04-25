@@ -1079,6 +1079,10 @@ a:active {
     margin-bottom: 5rem;
 }
 
+.page .post-thumbnail{
+    text-align: center;
+}
+
 .page-links {
     clear: both;
     margin: 0 0 1.5em;

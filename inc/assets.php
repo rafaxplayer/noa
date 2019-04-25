@@ -43,6 +43,17 @@ function noa_scripts() {
 add_action( 'wp_enqueue_scripts', 'noa_scripts' );
 
 /**
+ * Enqueue editor styles for Gutenberg
+ */
+function noa_block_editor_styles() {
+	// Block styles.
+	wp_enqueue_style( 'noa-block-editor-style', get_template_directory_uri() . 'assets/css/editor-blocks.css' );
+		
+}
+
+add_action( 'enqueue_block_editor_assets', 'noa_block_editor_styles' );
+
+/**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 

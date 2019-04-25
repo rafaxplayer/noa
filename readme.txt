@@ -2,7 +2,7 @@
 
 Contributors: automattic
 Requires at least: 4.5
-Tested up to: 4.9.5
+Tested up to: 5.1.1
 version: 1.2.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -43,6 +43,7 @@ GNU General Public License for more details.
 * Minor bug fixes
 * Support for woocommerce
 * Added customization settings
+* Added editor nlocks css
 
 = 1.2.8 - May 30 2018 =
 * Minor bug fixes
