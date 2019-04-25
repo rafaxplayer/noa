@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: noa\n"
-"POT-Creation-Date: 2018-05-22 10:16+0200\n"
-"PO-Revision-Date: 2018-05-22 10:55+0200\n"
+"POT-Creation-Date: 2019-04-18 09:38+0200\n"
+"PO-Revision-Date: 2019-04-18 09:39+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -41,7 +41,7 @@ msgstr "Viejo"
 msgid "New"
 msgstr "Nuevo"
 
-#: archive.php:40 inc/template-functions.php:50 search.php:43 single.php:25
+#: archive.php:40 inc/template-functions.php:50 search.php:43 single.php:26
 msgid "Post navigation"
 msgstr "Navegación de entradas"
 
@@ -71,23 +71,23 @@ msgstr "¿Qué estas pensando?"
 msgid "Theme: Noa by <a href=\"%s\">j.r.s</a>."
 msgstr "Tema: Noa por <a href=\"%1$s\">j.r.s</a>."
 
-#: functions.php:60
+#: functions.php:61
 msgid "Primary"
 msgstr "Principal"
 
-#: functions.php:121
+#: functions.php:125
 msgid "Footer Widgets 1"
 msgstr "Pie de pagina widgets 1"
 
-#: functions.php:123 functions.php:133 functions.php:143
+#: functions.php:127 functions.php:137 functions.php:147
 msgid "Add widgets here."
 msgstr "Añade widgets aquí."
 
-#: functions.php:131
+#: functions.php:135
 msgid "Footer Widgets 2"
 msgstr "Pie de pagina widgets 2"
 
-#: functions.php:141
+#: functions.php:145
 msgid "Footer Widgets 3"
 msgstr "Pie de pagina widgets 3"
 
@@ -95,73 +95,153 @@ msgstr "Pie de pagina widgets 3"
 msgid "Skip to content"
 msgstr "Saltar al contenido"
 
-#: inc/customizer.php:33
+#: header.php:47
+msgid "Enter Text"
+msgstr "Introduce texto"
+
+#: inc/customizer.php:40
 msgid "Animation for title and description"
 msgstr "Animación para titulo y descripción"
 
-#: inc/customizer.php:45
+#: inc/customizer.php:51
 msgid "Theme options"
 msgstr "Opciones del tema"
 
-#: inc/customizer.php:54
-msgid "Blog pagination options"
-msgstr "Opciones de paginación del blog"
+#: inc/customizer.php:59
+msgid "Header Button options"
+msgstr "Opciones del botón de cabecera"
 
-#: inc/customizer.php:57
+#: inc/customizer.php:62 inc/customizer.php:149
 msgid "Set pagination type on posts list"
 msgstr "Establece el tipo de paginación en la lista de entradas"
 
-#: inc/customizer.php:68
+#: inc/customizer.php:72
+msgid "Show Header button"
+msgstr "Mostrar el botón de cabecera"
+
+#: inc/customizer.php:75
+msgid ""
+"Show or hide header button , It will only be shown on the blog page or front "
+"page"
+msgstr ""
+"Mostrar u ocultar el botón de cabecera, solo se mostrara en la pagina de "
+"blog o pagina de inicio"
+
+#: inc/customizer.php:81
+msgid "Button Text"
+msgstr "Texto del botón"
+
+#: inc/customizer.php:87
+msgid "Text Button"
+msgstr "Texto botón"
+
+#: inc/customizer.php:90
+msgid "Set text for button header"
+msgstr "Establecer texto del botón de cabecera"
+
+#: inc/customizer.php:99
+msgid "Link for Button"
+msgstr "Enlace del botón"
+
+#: inc/customizer.php:102
+msgid "Set link for button header"
+msgstr "Establecer enlace del botón de cabecera"
+
+#: inc/customizer.php:112
+msgid "Color for button "
+msgstr "Color del botón "
+
+#: inc/customizer.php:115
+msgid "Set color button header"
+msgstr "Establecer color del botón de cabecera"
+
+#: inc/customizer.php:124
+msgid "Color for button header hover"
+msgstr "Color del botón de cabecera al pasar"
+
+#: inc/customizer.php:127
+msgid "Set color for button header hover"
+msgstr "Establecer color del botón de cabecera al pasar"
+
+#: inc/customizer.php:136
+msgid "Color text for button header "
+msgstr "Color del texto del botón de cabecera "
+
+#: inc/customizer.php:139
+msgid "Set color text with button header"
+msgstr "Establecer color del texto del botón de cabecera"
+
+#: inc/customizer.php:146
+msgid "Blog options"
+msgstr "Opciones del blog"
+
+#: inc/customizer.php:160
 msgid "Pagination Type"
 msgstr "Tipo de paginación"
 
-#: inc/customizer.php:72
+#: inc/customizer.php:164
 msgid "Old/New (Default)"
 msgstr "Viejo/Nuevo (Por defecto)"
 
-#: inc/customizer.php:73
+#: inc/customizer.php:165
 msgid "Numerical"
 msgstr "Numeral"
 
-#: inc/customizer.php:83
+#: inc/customizer.php:174
+msgid "Layout options"
+msgstr "Opciones de diseño"
+
+#: inc/customizer.php:177
+msgid "Set layout options"
+msgstr "Establece opciones de diseño"
+
+#: inc/customizer.php:191
+msgid "Content witch in pixels"
+msgstr "Ancho del contenido en pixeles"
+
+#: inc/customizer.php:212
+msgid "Show or hide Breadcrumbs"
+msgstr "Mostrar u ocultar migas de pan"
+
+#: inc/customizer.php:223
 msgid "Social icons"
 msgstr "Iconos redes sociales"
 
-#: inc/customizer.php:86
+#: inc/customizer.php:226
 msgid "Set url for social icons footer, with hidde icon set empty value."
 msgstr ""
 "Establece url para los iconos sociales del pie de pagina. Para ocultar "
 "iconos deja el campo en blanco."
 
-#: inc/customizer.php:97
+#: inc/customizer.php:237
 msgid "Instagram Url"
 msgstr "Instagram enlace"
 
-#: inc/customizer.php:111
+#: inc/customizer.php:251
 msgid "Pinterest Url"
 msgstr "Pinterest enlace"
 
-#: inc/customizer.php:125
+#: inc/customizer.php:265
 msgid "Facebook Url"
 msgstr "Facebook enlace"
 
-#: inc/customizer.php:137
+#: inc/customizer.php:277
 msgid "Twitter Url"
 msgstr "Twitter enlace"
 
-#: inc/customizer.php:149
+#: inc/customizer.php:289
 msgid "Linkedin Url"
 msgstr "LinkedIn enlace"
 
-#: inc/customizer.php:163
+#: inc/customizer.php:303
 msgid "Whatsapp Phone number"
 msgstr "Whatsapp numero de teléfono"
 
-#: inc/template-functions.php:57 single.php:23
+#: inc/template-functions.php:57 single.php:24
 msgid "Previous"
 msgstr "Anterior"
 
-#: inc/template-functions.php:58 single.php:24
+#: inc/template-functions.php:58 single.php:25
 msgid "Next"
 msgstr "Siguiente"
 
@@ -208,12 +288,10 @@ msgid "Search Results for: %s"
 msgstr "Resultados de búsqueda para: %s"
 
 #: searchform.php:2
-#, fuzzy
 msgid "Search"
 msgstr "Buscar"
 
 #: searchform.php:3
-#, fuzzy
 msgctxt "search words"
 msgid "Search"
 msgstr "Buscar"
@@ -291,5 +369,5 @@ msgstr ""
 msgid "https://juanrafaelsimarro.com/"
 msgstr ""
 
-#~ msgid "Enter text to search"
-#~ msgstr "Introduce texto a buscar"
+#~ msgid "Blog pagination options"
+#~ msgstr "Opciones de paginación del blog"

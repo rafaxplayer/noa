@@ -19,6 +19,18 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php
+
+		if(is_search()):?>
+			<header class="page-header">
+				<h1 class="page-title">
+					<?php
+					/* translators: %s: search query. */
+					printf( esc_html__( 'Search Results for: %s', 'noa' ), '<span>' . get_search_query() . '</span>' );
+					?>
+				</h1>
+			</header><!-- .page-header -->
+			<?php
+		endif;
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
@@ -29,17 +41,16 @@ get_header();
 				<?php
 			endif;?>
 
-			<div class="posts-container">
+			<div id="posts-container">
 				
 				<?php while ( have_posts() ) :?>
 
-					<div class="post-wrapp">
+					
 					<?php 
 						the_post();
 
-						get_template_part( 'template-parts/content', get_post_type() );?>
+						get_template_part( 'template-parts/content', get_post_type());?>
 
-					</div>
 					
 
 				<?php endwhile;?>
@@ -47,15 +58,7 @@ get_header();
 			
 			<?php 
 				noa_pagination();
-				/* the_posts_pagination( array(
-					'prev_text'          => '<i class="fa fa-angle-left"></i> ' . esc_html__( 'Previous', 'noa' ),
-					'next_text'          => esc_html__( 'Next', 'noa' ) . ' <i class="fa fa-angle-right"></i>',
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'noa' ) . ' </span>',
-				) ); */
-
-			
-
-			
+				
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );

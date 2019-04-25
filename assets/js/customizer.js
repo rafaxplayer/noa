@@ -27,6 +27,14 @@
         });
     });
 
+    wp.customize('noa_content_width', function(value) {
+        value.bind(function(to) {
+            $('.content-area').css({
+                'max-width': to+'px'
+            });
+        });
+    });
+
     // Header text color.
     wp.customize('header_textcolor', function(value) {
         value.bind(function(to) {

@@ -18,11 +18,12 @@
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 function noa_jetpack_setup() {
+	
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'render'    => 'noa_infinite_scroll_render',
-		'footer'    => 'page',
+		'container'      => 'content',
+		'render'         => 'noa_infinite_scroll_render',
+		'footer'         => 'page'
 	) );
 
 	// Add theme support for Responsive Videos.

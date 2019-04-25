@@ -3,7 +3,7 @@
 Contributors: automattic
 Requires at least: 4.5
 Tested up to: 4.9.5
-version: 1.2.8
+version: 1.2.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, grid-layout, custom-colors, footer-widgets, photography, full-width-template
@@ -13,8 +13,6 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 Theme thought for photography or photo blog, that's why priority is given to the highlighting of the images.
 
 = Features =
-
-noa includes support for Infinite Scroll in Jetpack.
 
 The galleries use lightbox technology for their correct operation when creating them, you must establish "link to" as the media file.
 
@@ -40,6 +38,11 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 == Changelog ==
+
+= 1.2.9 - Apr 24 2019 =
+* Minor bug fixes
+* Support for woocommerce
+* Added customization settings
 
 = 1.2.8 - May 30 2018 =
 * Minor bug fixes
@@ -85,7 +88,7 @@ normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT
 Source: https://necolas.github.io/normalize.css/
 
-masonry.js, Copyright © 2018 David DeSandro
+masonry.pkgd.js, Copyright © 2018 David DeSandro
 Licences: [MIT](https://desandro.mit-license.org/)
 Source: https://github.com/desandro/masonry
 

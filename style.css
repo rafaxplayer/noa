@@ -1,10 +1,10 @@
 /*!
 Theme Name: noa
-Theme URI: https://es.wordpress.org/themes/noa/
+Theme URI: 
 Author: J Rafael simarro
 Author URI: https://juanrafaelsimarro.com/
 Description: Theme thought for photography or photo blog, that's why priority is given to the highlighting of the images.
-Version: 1.2.8
+Version: 1.2.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: noa
@@ -24,7 +24,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Forms
 # Navigation
 	## Links
-	## Menus
+    ## Menus
+    ## Breadcrumbs
 # Accessibility
 # Alignments
 # Clearings
@@ -40,6 +41,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 # Footer
     ## Widgets
     ## Button Up
+# Animations
+# Woocommerce
 --------------------------------------------------------------*/
 
 
@@ -923,7 +926,19 @@ a:active {
     text-align: right;
     width: 50%;
 }
-
+/*--------------------------------------------------------------
+## Breadcrums
+--------------------------------------------------------------*/
+#noa_breadcrumbs{
+    padding:2rem;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+#noa_breadcrumbs a{
+    color:white;
+    font-weight: inherit;
+}
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1069,26 +1084,18 @@ a:active {
     margin: 0 0 1.5em;
 }
 
-.post-wrapp {
-    padding: 1px;
+.blog .post{
     width: 100%;
-    background: transparent;
-}
-
-.post-wrapp,
-.posts-container .post .info {
-    padding: 3px;
-}
-
-.posts-container .post {
     margin: 0;
     text-align: center;
     position: relative;
     min-height: 200px;
-    background-color: black;
+    background-color: #000000;
+    padding: 2px;
+    
 }
 
-.posts-container .post h2 {
+.blog .post h2{
     font-weight: 400;
     margin: 0 1.5rem 1rem;
     font-size: 1.2em;
@@ -1097,7 +1104,7 @@ a:active {
     padding-bottom: 1rem;
 }
 
-.posts-container .post h2:after {
+.blog .post h2:after{
     content: '';
     position: absolute;
     display: block;
@@ -1110,7 +1117,7 @@ a:active {
     top: 100%;
 }
 
-.posts-container .post h2:before {
+.blog .post h2:before{
     content: '';
     width: .5rem;
     border: .5rem solid transparent;
@@ -1123,11 +1130,11 @@ a:active {
     transform: translateX(-50%);
 }
 
-.posts-container .post img {
+.blog .post img{
     display: block;
 }
 
-.posts-container .post .info {
+.blog .post .info{
     font-weight: 400;
     position: absolute;
     top: 0;
@@ -1153,16 +1160,16 @@ a:active {
     flex-direction: column;
 }
 
-.posts-container .post .info:hover {
+.blog .post .info:hover {
     opacity: 1;
 }
 
-.posts-container .post .info a {
+.blog .post .info a {
     display: block;
     text-decoration: none;
 }
 
-.posts-container .post .info span {
+.blog .post .info span {
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 1rem auto;
@@ -1171,15 +1178,15 @@ a:active {
     font-size: .9rem;
 }
 
-.posts-container .post .info .comments-count {
+.blog .post .info .comments-count {
     background-image: url('assets/icons/comments.svg');
 }
 
-.posts-container .post .info .post-date {
+.blog .post .info .post-date {
     background-image: url('assets/icons/clock.svg');
 }
 
-.posts-container .post .info .sticky-icon {
+.blog .post .info .sticky-icon {
     background-image: url('assets/icons/push-pin_w.svg');
     background-position: center;
     background-size: 2rem;
@@ -1188,25 +1195,70 @@ a:active {
     margin-bottom: .3rem;
 }
 
+
+
+.search #posts-container {
+    text-align: center;
+}
+
+.search #posts-container .post{
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    
+}
+
+.search #posts-container .entry-title{
+    font-weight: 400;
+    margin-top:1rem;
+    margin-bottom: 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    position: relative;
+    color:#333;
+}
+
+.search #posts-container .meta{
+    color:#a09999;
+    font-family: serif;
+    font-size:1.5em;
+    font-weight: 100;
+    position: relative;
+}
+.search #posts-container .meta:after{
+    content:'';
+    position:relative;
+    display: block;
+    width: 200px;
+    height: 1px;
+    background-color: #d017d0;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top: 3rem;
+}
+.search #posts-container .meta .comments-count:before{
+    content: 'Comments : ';
+    padding-left: .5rem;
+}
+
 @media screen and (min-width: 37.5rem) {
-    .post-wrapp {
-        width: 49.999%;
+    .blog .post {
+        width: 50%;
     }
-    .posts-container .post .info {
+    .blog .post .info {
         opacity: 0;
         font-weight: 100;
         background-color: rgba(0, 0, 0, 0.6);
         -webkit-transition: opacity .8s ease-in-out;
         transition: opacity .8s ease-in-out;
     }
-    .posts-container .post h2 {
+    .blog .post h2 {
         font-weight: 100;
     }
 }
 
 @media screen and (min-width: 62.5rem) {
-    .post-wrapp {
-        width: 33.333%;
+    .blog .post{
+        width: 33.3333%;
     }
 }
 
@@ -1657,7 +1709,12 @@ object {
 
 .custom-logo-link {
     display: inline-block;
+    
+    
 }
+.custom-logo-link img{
+    max-width:200px ;
+} 
 
 
 /*--------------------------------------------------------------
@@ -1892,6 +1949,7 @@ object {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    padding-bottom: 3rem;
 }
 
 .site-header .site-branding .site-title {
@@ -1899,11 +1957,13 @@ object {
     font-size: 2.5rem;
     margin: 0;
     padding: .5rem 2rem;
+    text-transform: capitalize;
 }
 
 .site-header .site-branding .site-description {
     margin: 0;
     font-size: 1rem;
+    color: white;
 }
 
 .site-header .site-branding .header-button {
@@ -1952,7 +2012,7 @@ object {
 
 @media screen and (min-width: 37.5rem) {
     .site-header .site-branding .site-title {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
     .site-header .site-branding .site-description {
         font-size: .9rem;
@@ -1991,13 +2051,13 @@ object {
 /* ## Button Up*/
 
 .site-footer .button-up {
-    width: 80px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: rgba(0, 0, 0, 0.8);
     background-image: url(assets/icons/chevron-up.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 30px;
+    background-size: 18px;
     position: fixed;
     right: -80px;
     bottom: 5rem;
@@ -2144,11 +2204,13 @@ object {
     margin: 5px;
 }
 
-.widget .searchform {
+.widget .searchform,
+.widget.woocommerce {
     position: relative;
 }
 
-.widget .searchform input[type='search'] {
+.widget .searchform input[type='search'],
+.widget.woocommerce input[type='search'] {
     background-color: transparent;
     border: 2px solid #3c3939;
     color: #666;
@@ -2157,7 +2219,8 @@ object {
     width: 90%;
 }
 
-.widget .searchform input[type='submit'] {
+.widget .searchform input[type='submit'],
+.widget.woocommerce button[type='submit'] {
     background-color: transparent;
     background-image: url('assets/icons/search.svg');
     background-position: center center;
@@ -2330,7 +2393,7 @@ object {
 
 
 /*=============================================
-=            animations            =
+=            Animations            =
 =============================================*/
 
 .animated {
@@ -2489,3 +2552,21 @@ object {
 
 
 /*=====  End of animations  ======*/
+
+/*=============================================
+=            Woocommerce            =
+=============================================*/
+
+.woocommerce span.onsale{
+    background-color: #ff00ff;
+}
+
+.woocommerce-loop-product__title{
+    color:#333;
+}
+
+.woocommerce .button:hover,
+.woocommerce button.button.alt{
+    background-color: #a80054 !important;
+    color: white !important; 
+}

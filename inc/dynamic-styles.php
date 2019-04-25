@@ -22,6 +22,10 @@ function noa_dynamic_styles(){
        .site-header .site-branding .header-button:hover{
            background-color:<?php echo get_theme_mod('noa_header_button_color_hover','#774e73b'); ?>;
        }
+       .content-area{
+				margin:0 auto;
+				max-width: <?php echo get_theme_mod('noa_content_width', 1675);?>px;
+			}
    </style>
 
 <?php
