@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 						<?php if ( 'post' === get_post_type()) :?>
 							<div class="entry-meta">
 								<?php
-									noa_post_date();
+									noa_post_date(); 
 									noa_posted_by();
 								?>
 							</div><!-- .entry-meta -->

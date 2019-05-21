@@ -14,9 +14,10 @@
 if ( !defined( 'ABSPATH' ) ) { exit; }
 
 if ( class_exists( 'WP_Customize_Control' ) ) {
-	// add control range class
+	// add custom controls
 	require_once  dirname( __FILE__ ) . '/class-customizer-range-value-control/class-customizer-range-value-control.php';
 	require_once  dirname( __FILE__ ) . '/class-customizer-toggle-control/class-customizer-toggle-control.php';
+	require_once  dirname( __FILE__ ) . '/class-customizer-rate-control/class-customizer-rate-control.php';
 }
 
 function noa_customize_register( $wp_customize ) {
@@ -45,12 +46,34 @@ function noa_customize_register( $wp_customize ) {
 	));
 
 	/*
-	*Theme options panel
+	*
+	*
+	* THEME OPTOINS PANEL
+	*
+	*
 	*/
 	$wp_customize->add_panel( 'noa_theme_options_panel', array(
         'title' => esc_html__( 'Theme options', 'noa' ),
         'priority' => 35,
 	));
+
+	/*
+	* Rate noa theme
+	*/
+	$wp_customize->add_section( 'noa_rate_section' , array(
+		'title'       => esc_html__( 'Do you like noa theme?', 'noa' ),
+		'panel'		=> 'noa_theme_options_panel',
+		'priority' => 10,
+	));
+
+	$wp_customize->add_setting( 'noa_rate' , array());
+
+	$wp_customize->add_control( new Noa_Customize_Rate_Control( $wp_customize, 'noa_rate_control', array(
+		'section'    => 'noa_rate_section',
+		'settings'   => 'noa_rate'
+		
+	)));
+
 
 	/*
 	*Header button
@@ -70,7 +93,7 @@ function noa_customize_register( $wp_customize ) {
 
 	$wp_customize->add_control( new Customizer_Toggle_Control( $wp_customize, 'noa_header_button_control', array(
 		'label'      => esc_html__( 'Show Header button', 'noa' ),
-		'section'    => 'noa_header_button_section',
+		'section'    => 'noa_theme_options_panel',
 		'settings'   => 'noa_header_button',
 		'description'=> esc_html__('Show or hide header button , It will only be shown on the blog page or front page','noa'),
 		'type'        => 'ios',// light, ios, flat
