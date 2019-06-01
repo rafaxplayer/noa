@@ -67,5 +67,24 @@ jQuery(document).ready(function ($) {
 
     AOS.init();
 
+    // Implement infinite scroll with masonry
+    infinite_count = 0;
+
+    $( document.body ).on( 'post-load', function () {
+
+        infinite_count = infinite_count + 1;
+        console.log(infinite_count);
+        
+        var $container = $('#infinite-view-' + infinite_count);
+
+        $container.masonry({itemSelector: '.post'} );
+
+        // initialize
+        $container.imagesLoaded( function() {
+            $container.masonry('layout');
+
+        });
+    } );
+
 
 });

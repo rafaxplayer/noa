@@ -1,5 +1,5 @@
 <?php
-class Customizer_Range_Value_Control extends \WP_Customize_Control {
+class Customizer_Range_Value_Control extends WP_Customize_Control {
 	public $type = 'range-value';
 
 	/**

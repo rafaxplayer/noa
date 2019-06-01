@@ -1,6 +1,6 @@
 <?php
 
-class Customizer_Toggle_Control extends \WP_Customize_Control {
+class Customizer_Toggle_Control extends WP_Customize_Control {
 	public $type = 'ios';
 
 	/**

@@ -53,7 +53,7 @@ function noa_customize_register( $wp_customize ) {
 	*
 	*/
 	$wp_customize->add_panel( 'noa_theme_options_panel', array(
-        'title' => esc_html__( 'Theme options', 'noa' ),
+        'title' => esc_html__( 'Noa Theme options', 'noa' ),
         'priority' => 35,
 	));
 
@@ -66,7 +66,9 @@ function noa_customize_register( $wp_customize ) {
 		'priority' => 10,
 	));
 
-	$wp_customize->add_setting( 'noa_rate' , array());
+	$wp_customize->add_setting( 'noa_rate' , array(
+		'sanitize_callback' => 'sanitize_text_field',
+	));
 
 	$wp_customize->add_control( new Noa_Customize_Rate_Control( $wp_customize, 'noa_rate_control', array(
 		'section'    => 'noa_rate_section',

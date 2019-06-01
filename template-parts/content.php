@@ -66,6 +66,10 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 		<footer class="entry-footer">
 			<?php noa_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
-		<?php endif ?>
+			<?php 
+			if( function_exists( 'jetpack_author_bio' ) ): 
+				jetpack_author_bio(); 
+			endif;
+		endif; ?>
 	
 </article><!-- #post-<?php the_ID(); ?> -->

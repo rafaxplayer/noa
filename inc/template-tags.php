@@ -60,7 +60,7 @@ if ( ! function_exists( 'noa_comments_count' ) ) :
 	function noa_comments_count() {
 
 		$noa_comment_count = get_comments_number();
-		printf('<span class="comments-count">%1$s</span>',esc_html($noa_comment_count));
+		printf('<span class="comments-link comments-count">%1$s</span>',esc_html($noa_comment_count));
 
 	}
 endif;
