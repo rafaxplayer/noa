@@ -48,5 +48,10 @@ require get_template_directory().'/inc/assets.php';
  */
 require get_template_directory().'/inc/dynamic-styles.php';
 
+/**
+ * widget Instagram (thanks meks).
+ */
+require get_template_directory() . '/widgets/instagram-widget/instagram-widget.php';
+
 
 

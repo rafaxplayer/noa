@@ -3,10 +3,11 @@
 Contributors: automattic
 Requires at least: 4.5
 Tested up to: 5.1.1
-version: 1.3.0
+version: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, grid-layout, custom-colors, footer-widgets, photography, full-width-template
+Donate Link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DFZBWTFKLCWYQ&source=url
 
 == Description ==
 
@@ -38,6 +39,13 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
 == Changelog ==
+
+= 1.3.2 - Jun 26 2019 =
+* Minor bug fixes
+
+= 1.3.1 - Jun 10 2019 =
+* Minor bug fixes
+* Added Instagram Widget
 
 = 1.3.0 - Apr 29 2019 =
 * Minor bug fixes

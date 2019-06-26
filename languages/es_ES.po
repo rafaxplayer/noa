@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: noa\n"
-"POT-Creation-Date: 2019-02-16 00:47+0100\n"
-"PO-Revision-Date: 2019-02-16 00:47+0100\n"
+"POT-Creation-Date: 2019-06-26 16:59+0200\n"
+"PO-Revision-Date: 2019-06-26 17:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -33,15 +33,15 @@ msgstr ""
 "Parece que no se encontró nada en esta ubicación. Tal vez intente uno de los "
 "siguientes enlaces o una búsqueda?"
 
-#: archive.php:38 inc/template-functions.php:48 search.php:41
+#: archive.php:38 inc/template-functions.php:48
 msgid "Old"
 msgstr "Viejo"
 
-#: archive.php:39 inc/template-functions.php:49 search.php:42
+#: archive.php:39 inc/template-functions.php:49
 msgid "New"
 msgstr "Nuevo"
 
-#: archive.php:40 inc/template-functions.php:50 search.php:43 single.php:26
+#: archive.php:40 inc/template-functions.php:50 single.php:26
 msgid "Post navigation"
 msgstr "Navegación de entradas"
 
@@ -75,19 +75,19 @@ msgstr "Tema: Noa por <a href=\"%1$s\">j.r.s</a>."
 msgid "Primary"
 msgstr "Principal"
 
-#: functions.php:122
+#: functions.php:125
 msgid "Footer Widgets 1"
 msgstr "Pie de pagina widgets 1"
 
-#: functions.php:124 functions.php:134 functions.php:144
+#: functions.php:127 functions.php:137 functions.php:147
 msgid "Add widgets here."
 msgstr "Añade widgets aquí."
 
-#: functions.php:132
+#: functions.php:135
 msgid "Footer Widgets 2"
 msgstr "Pie de pagina widgets 2"
 
-#: functions.php:142
+#: functions.php:145
 msgid "Footer Widgets 3"
 msgstr "Pie de pagina widgets 3"
 
@@ -95,31 +95,39 @@ msgstr "Pie de pagina widgets 3"
 msgid "Skip to content"
 msgstr "Saltar al contenido"
 
-#: header.php:45
+#: header.php:47
 msgid "Enter Text"
 msgstr "Introduce texto"
 
-#: inc/customizer.php:34
+#: inc/class-customizer-rate-control/class-customizer-rate-control.php:10
+msgid "If you like the theme, give us your stars. "
+msgstr "Si te gusta el tema, danos tus estrellas "
+
+#: inc/customizer.php:41
 msgid "Animation for title and description"
 msgstr "Animación para titulo y descripción"
 
-#: inc/customizer.php:51
-msgid "Theme options"
-msgstr "Opciones del tema"
+#: inc/customizer.php:56
+msgid "Noa Theme options"
+msgstr "Tema Noa opciones"
 
-#: inc/customizer.php:53
+#: inc/customizer.php:64
+msgid "Do you like noa theme?"
+msgstr "¿Te gusta el tema noa?"
+
+#: inc/customizer.php:84
 msgid "Header Button options"
 msgstr "Opciones del botón de cabecera"
 
-#: inc/customizer.php:56 inc/customizer.php:146
+#: inc/customizer.php:87 inc/customizer.php:174
 msgid "Set pagination type on posts list"
 msgstr "Establece el tipo de paginación en la lista de entradas"
 
-#: inc/customizer.php:65
+#: inc/customizer.php:97
 msgid "Show Header button"
 msgstr "Mostrar el botón de cabecera"
 
-#: inc/customizer.php:68
+#: inc/customizer.php:100
 msgid ""
 "Show or hide header button , It will only be shown on the blog page or front "
 "page"
@@ -127,109 +135,113 @@ msgstr ""
 "Mostrar u ocultar el botón de cabecera, solo se mostrara en la pagina de "
 "blog o pagina de inicio"
 
-#: inc/customizer.php:75
+#: inc/customizer.php:106
 msgid "Button Text"
 msgstr "Texto del botón"
 
-#: inc/customizer.php:81
+#: inc/customizer.php:112
 msgid "Text Button"
 msgstr "Texto botón"
 
-#: inc/customizer.php:84
+#: inc/customizer.php:115
 msgid "Set text for button header"
 msgstr "Establecer texto del botón de cabecera"
 
-#: inc/customizer.php:93
+#: inc/customizer.php:124
 msgid "Link for Button"
 msgstr "Enlace del botón"
 
-#: inc/customizer.php:96
+#: inc/customizer.php:127
 msgid "Set link for button header"
 msgstr "Establecer enlace del botón de cabecera"
 
-#: inc/customizer.php:106
+#: inc/customizer.php:137
 msgid "Color for button "
 msgstr "Color del botón "
 
-#: inc/customizer.php:109
+#: inc/customizer.php:140
 msgid "Set color button header"
 msgstr "Establecer color del botón de cabecera"
 
-#: inc/customizer.php:118
+#: inc/customizer.php:149
 msgid "Color for button header hover"
 msgstr "Color del botón de cabecera al pasar"
 
-#: inc/customizer.php:121
+#: inc/customizer.php:152
 msgid "Set color for button header hover"
 msgstr "Establecer color del botón de cabecera al pasar"
 
-#: inc/customizer.php:130
+#: inc/customizer.php:161
 msgid "Color text for button header "
 msgstr "Color del texto del botón de cabecera "
 
-#: inc/customizer.php:133
+#: inc/customizer.php:164
 msgid "Set color text with button header"
 msgstr "Establecer color del texto del botón de cabecera"
 
-#: inc/customizer.php:143
-msgid "Blog pagination options"
-msgstr "Opciones de paginación del blog"
+#: inc/customizer.php:171
+msgid "Blog options"
+msgstr "Opciones del blog"
 
-#: inc/customizer.php:157
+#: inc/customizer.php:185
 msgid "Pagination Type"
 msgstr "Tipo de paginación"
 
-#: inc/customizer.php:161
+#: inc/customizer.php:189
 msgid "Old/New (Default)"
 msgstr "Viejo/Nuevo (Por defecto)"
 
-#: inc/customizer.php:162
+#: inc/customizer.php:190
 msgid "Numerical"
 msgstr "Numeral"
 
-#: inc/customizer.php:171
+#: inc/customizer.php:199
 msgid "Layout options"
 msgstr "Opciones de diseño"
 
-#: inc/customizer.php:174
+#: inc/customizer.php:202
 msgid "Set layout options"
 msgstr "Establece opciones de diseño"
 
-#: inc/customizer.php:198
+#: inc/customizer.php:216
 msgid "Content witch in pixels"
 msgstr "Ancho del contenido en pixeles"
 
-#: inc/customizer.php:215
+#: inc/customizer.php:237
+msgid "Show or hide Breadcrumbs"
+msgstr "Mostrar u ocultar migas de pan"
+
+#: inc/customizer.php:248
 msgid "Social icons"
 msgstr "Iconos redes sociales"
 
-#: inc/customizer.php:218
+#: inc/customizer.php:251
 msgid "Set url for social icons footer, with hidde icon set empty value."
 msgstr ""
 "Establece url para los iconos sociales del pie de pagina. Para ocultar "
 "iconos deja el campo en blanco."
 
-#: inc/customizer.php:229
+#: inc/customizer.php:262
 msgid "Instagram Url"
 msgstr "Instagram enlace"
 
-#: inc/customizer.php:243
+#: inc/customizer.php:276
 msgid "Pinterest Url"
 msgstr "Pinterest enlace"
 
-#: inc/customizer.php:257
+#: inc/customizer.php:290
 msgid "Facebook Url"
 msgstr "Facebook enlace"
 
-#: inc/customizer.php:269
+#: inc/customizer.php:302
 msgid "Twitter Url"
 msgstr "Twitter enlace"
 
-#: inc/customizer.php:281
+#: inc/customizer.php:314
 msgid "Linkedin Url"
 msgstr "LinkedIn enlace"
 
-#: inc/customizer.php:295
+#: inc/customizer.php:328
 msgid "Whatsapp Phone number"
 msgstr "Whatsapp numero de teléfono"
 
@@ -278,7 +290,7 @@ msgid "Edit"
 msgstr "Editar"
 
 #. translators: %s: search query.
-#: search.php:23
+#: index.php:28
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Resultados de búsqueda para: %s"
@@ -341,6 +353,125 @@ msgstr "Publicación adhesiva"
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Continua leyendo<span class=\"screen-reader-text\"> \"%s\"</span>"
 
+#: widgets/instagram-widget/inc/class-instagram-widget.php:36
+msgid "Noa Instagram Widget"
+msgstr "Noa Instagram Widget"
+
+#: widgets/instagram-widget/inc/class-instagram-widget.php:38
+msgid "Easily display Instagram photos with this widget."
+msgstr "Muestra fácilmente las fotos de Instagram con este widget."
+
+#: widgets/instagram-widget/inc/class-instagram-widget.php:50
+msgid "Follow"
+msgstr "Comparte"
+
+#: widgets/instagram-widget/inc/class-instagram-widget.php:268
+msgid "Unable to communicate with Instagram."
+msgstr "No se puede comunicar con Instagram."
+
+#: widgets/instagram-widget/inc/class-instagram-widget.php:278
+msgid "Instagram has returned empty data. Please check your username/hashtag."
+msgstr ""
+"Instagram ha devuelto datos vacíos. Por favor, compruebe su nombre de "
+"usuario / hashtag."
+
+#: widgets/instagram-widget/inc/class-instagram-widget.php:286
+msgid "Instagram has returned invalid data."
+msgstr "Instagram ha devuelto datos inválidos."
+
+#: widgets/instagram-widget/inc/class-instagram-widget.php:292
+msgid ""
+"Images not found. This may be a temporary problem. Please try again soon."
+msgstr ""
+"Imágenes no encontradas. Esto puede ser un problema temporal. Por favor, "
+"intente de nuevo pronto."
+
+#: widgets/instagram-widget/views/admin_html.php:2
+msgid "Title"
+msgstr "Titulo"
+
+#: widgets/instagram-widget/views/admin_html.php:4
+msgid "Note: Leave empty for no title"
+msgstr "Nota: Deje en blanco sin título"
+
+#: widgets/instagram-widget/views/admin_html.php:9
+msgid "Username or Hashtag"
+msgstr "Nombre de usuario o Hashtag"
+
+#: widgets/instagram-widget/views/admin_html.php:11
+msgid ""
+"Multiple usernames and hastags are alowed.<br/>Example 1: @natgeo<br/"
+">Example 2: #flowers<br/>Example 3: @natgeo, #flowers, @someother"
+msgstr ""
+"Se permiten múltiples nombres de usuario y hashtags. <br/> Ejemplo 1: "
+"@natgeo <br/> Ejemplo 2: #flowers <br/> Ejemplo 3: @natgeo, #flowers, "
+"@someother"
+
+#: widgets/instagram-widget/views/admin_html.php:16
+msgid "Number of photos"
+msgstr "Numero de fotos"
+
+#: widgets/instagram-widget/views/admin_html.php:23
+msgid "Columns"
+msgstr "Columnas"
+
+#: widgets/instagram-widget/views/admin_html.php:30
+msgid "Choose in how many columns you would like to display your photos"
+msgstr "Elija en cuántas columnas le gustaría mostrar sus fotos"
+
+#: widgets/instagram-widget/views/admin_html.php:35
+msgid "Photo spacing"
+msgstr "Espaciado entre fotos"
+
+#: widgets/instagram-widget/views/admin_html.php:37
+msgid "Specify a spacing between your photos"
+msgstr "Especifica un espacio entre tus fotos"
+
+#: widgets/instagram-widget/views/admin_html.php:42
+msgid "Widget container size"
+msgstr "Tamaño del widget"
+
+#: widgets/instagram-widget/views/admin_html.php:44
+msgid ""
+"If needed, fine tune the size of the entire widget to match your theme's "
+"sidebar width"
+msgstr ""
+"Si es necesario, ajusta el tamaño del widget completo para que coincida con "
+"el ancho de la barra lateral de tu tema"
+
+#: widgets/instagram-widget/views/admin_html.php:49
+msgid "Refresh interval"
+msgstr "Refrescar intervalo"
+
+#: widgets/instagram-widget/views/admin_html.php:51
+#: widgets/instagram-widget/views/admin_html.php:53
+msgid "Hour"
+msgstr "Hora"
+
+#: widgets/instagram-widget/views/admin_html.php:52
+#: widgets/instagram-widget/views/admin_html.php:54
+msgid "Hours"
+msgstr "Horas"
+
+#: widgets/instagram-widget/views/admin_html.php:56
+msgid ""
+"Select a time interval in which the widget checks Instagram for new images"
+msgstr ""
+"Seleccione un intervalo de tiempo en el que el widget compruebe Instagram "
+"para nuevas imágenes"
+
+#: widgets/instagram-widget/views/admin_html.php:60
+msgid "\"Follow\" link text"
+msgstr "\"Seguir\" enlace de texto"
+
+#: widgets/instagram-widget/views/admin_html.php:62
+msgid ""
+"Specify a text for your \"follow\" link, or leave empty if you do not want "
+"to display the \"follow\" link"
+msgstr ""
+"Especifique un texto para su enlace \"seguir\", o déjelo vacío si no desea "
+"mostrar el enlace"
+
 #: widgets/recent-post-thumbnails.php:17
 msgid "Recent Posts"
 msgstr "Publicaciones recientes"
@@ -364,3 +495,6 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://juanrafaelsimarro.com/"
 msgstr ""
+
+#~ msgid "Blog pagination options"
+#~ msgstr "Opciones de paginación del blog"

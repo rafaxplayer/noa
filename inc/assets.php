@@ -12,7 +12,7 @@ if ( !defined( 'ABSPATH' ) ) { exit; }
 
 function noa_scripts() {
 	
-	wp_enqueue_style( 'noa-style', get_stylesheet_uri(), array(), '1.3.0' );
+	wp_enqueue_style( 'noa-style', get_stylesheet_uri());
 
 	wp_enqueue_style( 'googlefont-pacifico', 'https://fonts.googleapis.com/css?family=Pacifico' );
 	

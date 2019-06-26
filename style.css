@@ -4,7 +4,7 @@ Theme URI:
 Author: J Rafael simarro
 Author URI: https://juanrafaelsimarro.com/
 Description: Theme thought for photography or photo blog, that's why priority is given to the highlighting of the images.
-Version: 1.3.0
+Version: 1.3.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: noa
@@ -1204,17 +1204,20 @@ a:active {
 
 
 
-.search #posts-container {
+.search #posts-container,
+.archive #posts-container{
     text-align: center;
 }
 
-.search #posts-container .post{
+.search #posts-container .post,
+.archive #posts-container .post{
     margin-bottom: 4rem;
     padding-bottom: 2rem;
     
 }
 
-.search #posts-container .entry-title{
+.search #posts-container .entry-title,
+.archive #posts-container .entry-title{
     font-weight: 400;
     margin-top:1rem;
     margin-bottom: 0;
@@ -1224,14 +1227,16 @@ a:active {
     color:#333;
 }
 
-.search #posts-container .meta{
+.search #posts-container .meta,
+.archive #posts-container .meta{
     color:#a09999;
     font-family: serif;
     font-size:1.5em;
     font-weight: 100;
     position: relative;
 }
-.search #posts-container .meta:after{
+.search #posts-container .meta:after,
+.archive #posts-container .meta:after{
     content:'';
     position:relative;
     display: block;
@@ -1242,7 +1247,8 @@ a:active {
     transform: translateX(-50%);
     margin-top: 3rem;
 }
-.search #posts-container .meta .comments-count:before{
+.search #posts-container .meta .comments-count:before,
+.archive #posts-container .meta .comments-count:before{
     content: 'Comments : ';
     padding-left: .5rem;
 }
