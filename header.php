@@ -49,10 +49,11 @@ if ( function_exists( 'wp_body_open' ) ) {
 			<?php do_action('noa_action_breadcrumbs'); ?>
 
 			<?php if ((is_front_page() || is_home()) && get_theme_mod('noa_header_button', true)): 
+			
 				$linkButton = esc_url( get_theme_mod('noa_header_button_link',home_url( '/')));
 				$textButton = esc_html(get_theme_mod('noa_header_button_text', __('Enter Text','noa')));
 				?>
-				<a href="<?php $linkButton; ?>" class="header-button"><?php echo $textButton;?></a>
+				<a href="<?php echo $linkButton; ?>" class="header-button"><?php echo $textButton;?></a>
 			<?php endif; ?>
 
 		</div><!-- .site-branding -->

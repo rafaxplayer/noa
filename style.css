@@ -4,7 +4,7 @@ Theme URI:
 Author: J Rafael simarro
 Author URI: https://juanrafaelsimarro.com/
 Description: Theme thought for photography or photo blog, that's why priority is given to the highlighting of the images.
-Version: 1.3.2
+Version: 1.3.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: noa
@@ -679,6 +679,7 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -928,19 +929,24 @@ a:active {
     text-align: right;
     width: 50%;
 }
+
+
 /*--------------------------------------------------------------
 ## Breadcrums
 --------------------------------------------------------------*/
-#noa_breadcrumbs{
-    padding:2rem;
+
+#noa_breadcrumbs {
+    padding: 2rem;
     text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 200;
 }
-#noa_breadcrumbs a{
-    color:white;
+
+#noa_breadcrumbs a {
+    color: white;
     font-weight: inherit;
 }
+
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -1082,7 +1088,7 @@ a:active {
     margin-bottom: 5rem;
 }
 
-.page .post-thumbnail{
+.page .post-thumbnail {
     text-align: center;
 }
 
@@ -1091,7 +1097,7 @@ a:active {
     margin: 0 0 1.5em;
 }
 
-.blog .post{
+.blog .post {
     width: 100%;
     margin: 0;
     text-align: center;
@@ -1099,10 +1105,9 @@ a:active {
     min-height: 200px;
     background-color: #000000;
     padding: 2px;
-    
 }
 
-.blog .post h2{
+.blog .post h2 {
     font-weight: 400;
     margin: 0 1.5rem 1rem;
     font-size: 1.2em;
@@ -1111,7 +1116,7 @@ a:active {
     padding-bottom: 1rem;
 }
 
-.blog .post h2:after{
+.blog .post h2:after {
     content: '';
     position: absolute;
     display: block;
@@ -1124,7 +1129,7 @@ a:active {
     top: 100%;
 }
 
-.blog .post h2:before{
+.blog .post h2:before {
     content: '';
     width: .5rem;
     border: .5rem solid transparent;
@@ -1137,11 +1142,11 @@ a:active {
     transform: translateX(-50%);
 }
 
-.blog .post img{
+.blog .post img {
     display: block;
 }
 
-.blog .post .info{
+.blog .post .info {
     font-weight: 400;
     position: absolute;
     top: 0;
@@ -1202,53 +1207,52 @@ a:active {
     margin-bottom: .3rem;
 }
 
-
-
 .search #posts-container,
-.archive #posts-container{
+.archive #posts-container {
     text-align: center;
 }
 
 .search #posts-container .post,
-.archive #posts-container .post{
+.archive #posts-container .post {
     margin-bottom: 4rem;
     padding-bottom: 2rem;
-    
 }
 
 .search #posts-container .entry-title,
-.archive #posts-container .entry-title{
+.archive #posts-container .entry-title {
     font-weight: 400;
-    margin-top:1rem;
+    margin-top: 1rem;
     margin-bottom: 0;
     font-size: 2em;
     text-transform: uppercase;
     position: relative;
-    color:#333;
+    color: #333;
 }
 
 .search #posts-container .meta,
-.archive #posts-container .meta{
-    color:#a09999;
+.archive #posts-container .meta {
+    color: #a09999;
     font-family: serif;
-    font-size:1.5em;
+    font-size: 1.5em;
     font-weight: 100;
     position: relative;
 }
+
 .search #posts-container .meta:after,
-.archive #posts-container .meta:after{
-    content:'';
-    position:relative;
+.archive #posts-container .meta:after {
+    content: '';
+    position: relative;
     display: block;
     width: 200px;
     height: 1px;
     background-color: #d017d0;
-    left:50%;
+    left: 50%;
     transform: translateX(-50%);
     margin-top: 3rem;
 }
+
 .search #posts-container .meta .comments-count:before,
-.archive #posts-container .meta .comments-count:before{
+.archive #posts-container .meta .comments-count:before {
     content: 'Comments : ';
     padding-left: .5rem;
 }
@@ -1270,7 +1274,7 @@ a:active {
 }
 
 @media screen and (min-width: 62.5rem) {
-    .blog .post{
+    .blog .post {
         width: 33.3333%;
     }
 }
@@ -1365,28 +1369,33 @@ a:active {
     background-image: url(assets/icons/edit.svg);
 }
 
-.post .entry-author{
+.post .entry-author {
     margin-top: 8rem;
     border-radius: 8px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
 }
+
 .post .entry-author .author-avatar,
-.post .entry-author .author-heading{
+.post .entry-author .author-heading {
     text-align: center;
     padding: 1rem;
 }
-.post .entry-author .author-avatar{
+
+.post .entry-author .author-avatar {
     background-color: #000000;
 }
-.post .entry-author .author-avatar img{
-    border-radius:50%;
+
+.post .entry-author .author-avatar img {
+    border-radius: 50%;
     margin-top: -4rem;
 }
-.post .entry-author .author-title{
+
+.post .entry-author .author-title {
     margin: 0;
     font-size: 1.2em;
 }
-.post .entry-author .author-bio{
+
+.post .entry-author .author-bio {
     padding: 0 1rem 1rem;
 }
 
@@ -1748,12 +1757,11 @@ object {
 
 .custom-logo-link {
     display: inline-block;
-    
-    
 }
-.custom-logo-link img{
-    max-width:200px ;
-} 
+
+.custom-logo-link img {
+    max-width: 200px;
+}
 
 
 /*--------------------------------------------------------------
@@ -2592,20 +2600,21 @@ object {
 
 /*=====  End of animations  ======*/
 
+
 /*=============================================
 =            Woocommerce            =
 =============================================*/
 
-.woocommerce span.onsale{
+.woocommerce span.onsale {
     background-color: #ff00ff;
 }
 
-.woocommerce-loop-product__title{
-    color:#333;
+.woocommerce-loop-product__title {
+    color: #333;
 }
 
 .woocommerce .button:hover,
-.woocommerce button.button.alt{
+.woocommerce button.button.alt {
     background-color: #a80054 !important;
-    color: white !important; 
+    color: white !important;
 }

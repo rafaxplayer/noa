@@ -116,8 +116,8 @@ function noa_customize_register( $wp_customize ) {
 	));
 
 	$wp_customize->add_setting( 'noa_header_button_link' , array(
-		'default' => esc_url(home_url( '/'),'noa'),
-		'sanitize_callback' => 'url_raw',
+		'default' => esc_url(home_url( '/')),
+		'sanitize_callback' => 'esc_url_raw',
 	));
 
 	$wp_customize->add_control( 'noa_header_button_link_control', array(
@@ -125,6 +125,7 @@ function noa_customize_register( $wp_customize ) {
 		'section'    => 'noa_header_button_section',
 		'settings'   => 'noa_header_button_link',
 		'description'=> esc_html__('Set link for button header','noa'),
+		'type'       => 'url'
 					
 	));
 
